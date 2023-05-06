@@ -231,7 +231,7 @@ public class SignUp extends javax.swing.JFrame {
     String regPassText = new String(regPass.getPassword());
     String txtPassText = new String(txtPass.getPassword());
     
-    ImageIcon userIcon = new ImageIcon("C:\\Users\\Lathrell Pagsuguiron\\Documents\\NetBeansProjects\\busTicketing\\src\\assets\\logo_1.PNG");
+    ImageIcon userIcon = new ImageIcon(getClass().getResource("/assets/logo_1.png"));
 
     final String MESSAGE = "Please fill in all the required fields.";
     final String ERROR = "Passwords do not match. Please try again.";
