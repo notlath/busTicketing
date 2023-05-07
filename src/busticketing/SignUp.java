@@ -73,7 +73,7 @@ public class SignUp extends javax.swing.JFrame {
         ticketdetails.setFont(new java.awt.Font("Aftika ExtraBold", 0, 36)); // NOI18N
         ticketdetails.setForeground(new java.awt.Color(20, 31, 80));
         ticketdetails.setText("SIGN UP");
-        jPanel2.add(ticketdetails, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 30, -1, -1));
+        jPanel2.add(ticketdetails, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 30, -1, -1));
 
         FROM2.setFont(new java.awt.Font("Aftika Bold", 0, 14)); // NOI18N
         FROM2.setForeground(new java.awt.Color(20, 31, 80));
@@ -138,17 +138,6 @@ public class SignUp extends javax.swing.JFrame {
                 regPassActionPerformed(evt);
             }
         });
-        regPass.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyPressed(java.awt.event.KeyEvent evt) {
-                regPassKeyPressed(evt);
-            }
-            public void keyReleased(java.awt.event.KeyEvent evt) {
-                regPassKeyReleased(evt);
-            }
-            public void keyTyped(java.awt.event.KeyEvent evt) {
-                regPassKeyTyped(evt);
-            }
-        });
         jPanel2.add(regPass, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 310, 240, 30));
 
         confirm.setBackground(new java.awt.Color(46, 72, 187));
@@ -170,7 +159,7 @@ public class SignUp extends javax.swing.JFrame {
         FROM7.setFont(new java.awt.Font("Aftika Light", 0, 12)); // NOI18N
         FROM7.setForeground(new java.awt.Color(20, 31, 80));
         FROM7.setText("Already have an account?");
-        jPanel2.add(FROM7, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 80, -1, -1));
+        jPanel2.add(FROM7, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 80, -1, -1));
 
         FROM8.setFont(new java.awt.Font("Aftika Bold", 0, 14)); // NOI18N
         FROM8.setForeground(new java.awt.Color(20, 31, 80));
@@ -187,10 +176,10 @@ public class SignUp extends javax.swing.JFrame {
                 jButton1ActionPerformed(evt);
             }
         });
-        jPanel2.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 80, 50, -1));
+        jPanel2.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 80, 50, -1));
 
         match.setFont(new java.awt.Font("Aftika SemiBold", 2, 12)); // NOI18N
-        match.setForeground(new java.awt.Color(208, 67, 76));
+        match.setForeground(new java.awt.Color(255, 51, 51));
         jPanel2.add(match, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 400, 200, 20));
 
         jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 330, 510));
@@ -286,37 +275,13 @@ public class SignUp extends javax.swing.JFrame {
     
     }//GEN-LAST:event_txtPassActionPerformed
 
-    private void regPassKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_regPassKeyPressed
-
-    }//GEN-LAST:event_regPassKeyPressed
-
     private void txtPassKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtPassKeyPressed
 
     }//GEN-LAST:event_txtPassKeyPressed
 
-    private void regPassKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_regPassKeyTyped
-
-    }//GEN-LAST:event_regPassKeyTyped
-
     private void txtPassKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtPassKeyTyped
 
     }//GEN-LAST:event_txtPassKeyTyped
-
-    private void regPassKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_regPassKeyReleased
-    if (Arrays.equals(regPass.getPassword(), txtPass.getPassword())) {
-      validator = true;
-      
-      match.setText("");
-      regPass.setForeground(new Color(20, 31, 80));
-      txtPass.setForeground(new Color(20, 31, 80));
-    } else {
-      validator = false;
-      
-      match.setText("Passwords do not match.");
-      regPass.setForeground(new Color(208, 67, 76));
-      txtPass.setForeground(new Color(208, 67, 76));
-    }
-    }//GEN-LAST:event_regPassKeyReleased
 
     private void txtPassKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtPassKeyReleased
     if (Arrays.equals(regPass.getPassword(), txtPass.getPassword())) {

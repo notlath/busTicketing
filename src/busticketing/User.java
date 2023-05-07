@@ -69,22 +69,23 @@ public class User extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setTitle("User Authentication");
         setBackground(new java.awt.Color(51, 255, 0));
-        setMinimumSize(new java.awt.Dimension(736, 473));
         setPreferredSize(new java.awt.Dimension(784, 502));
         setResizable(false);
+        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         userPanel.setBackground(new java.awt.Color(246, 247, 252));
         userPanel.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jPanel2.setBackground(new java.awt.Color(20, 31, 80));
-        jPanel2.setPreferredSize(new java.awt.Dimension(736, 473));
+        jPanel2.setMinimumSize(new java.awt.Dimension(270, 470));
+        jPanel2.setPreferredSize(new java.awt.Dimension(784, 502));
         jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         FROM7.setBackground(new java.awt.Color(246, 247, 252));
         FROM7.setFont(new java.awt.Font("Aftika Light", 0, 12)); // NOI18N
         FROM7.setForeground(new java.awt.Color(246, 247, 252));
         FROM7.setText("Don't have an account?");
-        jPanel2.add(FROM7, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 350, -1, -1));
+        jPanel2.add(FROM7, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 380, -1, 20));
 
         jButton2.setBackground(new java.awt.Color(20, 31, 80));
         jButton2.setFont(new java.awt.Font("Aftika SemiBold", 0, 12)); // NOI18N
@@ -97,16 +98,17 @@ public class User extends javax.swing.JFrame {
                 jButton2ActionPerformed(evt);
             }
         });
-        jPanel2.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 350, -1, -1));
+        jPanel2.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 380, -1, 20));
 
         ticketdetails.setFont(new java.awt.Font("Aftika ExtraBold", 0, 36)); // NOI18N
         ticketdetails.setForeground(new java.awt.Color(255, 255, 255));
         ticketdetails.setText("LOGIN");
-        jPanel2.add(ticketdetails, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 90, -1, -1));
+        jPanel2.add(ticketdetails, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 110, -1, -1));
 
         uname.setFont(new java.awt.Font("Aftika Light", 0, 12)); // NOI18N
         uname.setForeground(new java.awt.Color(196, 197, 201));
         uname.setText("Email");
+        uname.setBorder(javax.swing.BorderFactory.createCompoundBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1), javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1)));
         uname.addFocusListener(new java.awt.event.FocusAdapter() {
             public void focusGained(java.awt.event.FocusEvent evt) {
                 unameFocusGained(evt);
@@ -120,11 +122,12 @@ public class User extends javax.swing.JFrame {
                 unameActionPerformed(evt);
             }
         });
-        jPanel2.add(uname, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 160, 240, 30));
+        jPanel2.add(uname, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 180, 240, 30));
 
         password.setFont(new java.awt.Font("Aftika Light", 0, 12)); // NOI18N
         password.setForeground(new java.awt.Color(196, 197, 201));
         password.setText("Password");
+        password.setBorder(javax.swing.BorderFactory.createCompoundBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1), javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1)));
         password.setEchoChar('\u0000');
         password.addFocusListener(new java.awt.event.FocusAdapter() {
             public void focusGained(java.awt.event.FocusEvent evt) {
@@ -144,7 +147,7 @@ public class User extends javax.swing.JFrame {
                 passwordKeyReleased(evt);
             }
         });
-        jPanel2.add(password, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 210, 240, 30));
+        jPanel2.add(password, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 230, 240, 30));
 
         showPass.setBackground(new java.awt.Color(20, 31, 80));
         showPass.setFont(new java.awt.Font("Aftika Light", 0, 12)); // NOI18N
@@ -156,7 +159,7 @@ public class User extends javax.swing.JFrame {
                 showPassActionPerformed(evt);
             }
         });
-        jPanel2.add(showPass, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 250, -1, -1));
+        jPanel2.add(showPass, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 280, -1, 20));
 
         jButton1.setBackground(new java.awt.Color(46, 72, 187));
         jButton1.setFont(new java.awt.Font("Aftika SemiBold", 0, 14)); // NOI18N
@@ -167,38 +170,31 @@ public class User extends javax.swing.JFrame {
                 jButton1ActionPerformed(evt);
             }
         });
-        jPanel2.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 280, 240, 31));
+        jPanel2.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 330, 240, 31));
 
-        invalidCred.setFont(new java.awt.Font("Aftika SemiBold", 2, 12)); // NOI18N
-        invalidCred.setForeground(new java.awt.Color(208, 67, 76));
-        jPanel2.add(invalidCred, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 320, 200, 20));
+        invalidCred.setBackground(new java.awt.Color(255, 148, 148));
+        invalidCred.setFont(new java.awt.Font("Aftika SemiBold", 2, 10)); // NOI18N
+        invalidCred.setForeground(new java.awt.Color(255, 51, 51));
+        invalidCred.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        jPanel2.add(invalidCred, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 300, 240, 20));
 
-        userPanel.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 330, 500));
+        userPanel.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 330, 510));
 
         subname1.setFont(new java.awt.Font("Aftika SemiBold", 0, 14)); // NOI18N
         subname1.setForeground(new java.awt.Color(20, 31, 80));
         subname1.setText("Explore the world with ease!");
-        userPanel.add(subname1, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 260, -1, -1));
+        userPanel.add(subname1, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 250, -1, -1));
 
         name1.setBackground(new java.awt.Color(20, 31, 80));
         name1.setFont(new java.awt.Font("Akira Expanded", 2, 48)); // NOI18N
         name1.setForeground(new java.awt.Color(20, 31, 80));
         name1.setText("JTransit");
-        userPanel.add(name1, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 200, -1, -1));
+        userPanel.add(name1, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 190, -1, -1));
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/assets/login-page.png"))); // NOI18N
-        userPanel.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 0, 460, 500));
+        userPanel.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, -20, 510, 540));
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(userPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(userPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-        );
+        getContentPane().add(userPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, 502));
 
         pack();
         setLocationRelativeTo(null);
@@ -249,6 +245,9 @@ public class User extends javax.swing.JFrame {
 
                  invalidCred.setText(LOGIN_FAILURE_MESSAGE);
                  return;
+              } else if (!(email.equals(emailFromDB) && pword.equals(passwordFromDB))) {
+                 validator = false;
+                 invalidCred.setText("Incorrect username or password.");
               }
            }
 

@@ -64,7 +64,7 @@ public class BusRoute extends javax.swing.JFrame {
         jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 160, 250, 36));
 
         options.setFont(new java.awt.Font("Aftika Light", 0, 14)); // NOI18N
-        options.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Cubao", "TIPQC", "J.P Rizal", "Katipunan Ave.", "SM Marikina", "Ligaya", "Sta. Lucia Mall" }));
+        options.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "SM Aura", "Kalayaan Ave.", "Bagong Ilog", "Lanuza Ave.", "Hypermarket", "Ortigas Ave.", "Wilcon Depot", "Eastwood", "Libis", "IVC Flyover", "SM Marikina", "Ligaya", "Sta. Lucia", "Vermont", "SM Masinag", "Maries Village", "SM Cherry Antipolo", "Pagral", "Cogeo Gate 1", "Northville", "Cogeo Gate 2" }));
         options.addContainerListener(new java.awt.event.ContainerAdapter() {
             public void componentRemoved(java.awt.event.ContainerEvent evt) {
                 optionsComponentRemoved(evt);
@@ -111,7 +111,7 @@ public class BusRoute extends javax.swing.JFrame {
         jPanel1.add(FROM1, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 230, -1, 30));
 
         destination.setFont(new java.awt.Font("Aftika Light", 0, 14)); // NOI18N
-        destination.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Sta. Lucia Mall", "Ligaya", "SM Marikina", "Katipunan Ave.", "J.P Rizal", "TIPQC", "Cubao" }));
+        destination.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Cogeo Gate 2", "Northville", "Cogeo Gate 1", "Pagral", "SM Cherry Antipolo", "Maries Village", "SM Masinag", "Vermont", "Sta. Lucia", "Ligaya", "SM Marikina", "IVC Flyover", "Libis", "Eastwood", "Wilcon Depot", "Ortigas Ave.", "Hypermarket", "Lanuza Ave.", "Bagong Ilog", "Kalayaan Ave.", "SM Aura" }));
         destination.addContainerListener(new java.awt.event.ContainerAdapter() {
             public void componentRemoved(java.awt.event.ContainerEvent evt) {
                 destinationComponentRemoved(evt);
@@ -197,24 +197,66 @@ public class BusRoute extends javax.swing.JFrame {
     case 0:
         switch (selectedDestination) {
         case 0:
-            price = 15.25;
+            price = 43.00;
             break;
         case 1:
-            price = 14.00;
+            price = 41.00;
             break;
         case 2:
-            price = 14.00;
+            price = 39.00;
             break;
         case 3:
-            price = 13.00;
+            price = 37.00;
             break;
         case 4:
-            price = 13.00;
+            price = 35.00;
             break;
         case 5:
-            price = 12.00;
+            price = 33.00;
             break;
         case 6:
+            price = 31.00;
+            break;
+        case 7:
+            price = 29.00;
+            break;
+        case 8:
+            price = 27.00;
+            break;
+        case 9:
+            price = 25.00;
+            break;
+        case 10:
+            price = 23.00;
+            break;
+        case 11: 
+            price = 21.00;
+            break;
+        case 12:
+            price = 19.00;
+            break;
+        case 13:
+            price = 17.00;
+            break;
+        case 14:
+            price = 15.00;
+            break;
+        case 15:
+            price = 13.00;
+            break;
+        case 16: 
+            price = 11.00;
+            break;
+        case 17:
+            price = 11.00;
+            break;
+        case 18:
+            price = 11.00;
+            break;
+        case 19:
+            price = 11.00;
+            break;
+        case 20:
             JOptionPane.showMessageDialog(null, "Please select a valid destination.", "INVALID SELECTION", JOptionPane.ERROR_MESSAGE, userIcon);
             error = true;
             break;
@@ -223,159 +265,1349 @@ public class BusRoute extends javax.swing.JFrame {
     case 1:
         switch (selectedDestination) {
         case 0:
-            price = 14.00;
+            price = 41.00;
             break;
         case 1:
-            price = 14.00;
+            price = 39.00;
             break;
         case 2:
-            price = 13.00;
+            price = 37.00;
             break;
         case 3:
-            price = 12.00;
+            price = 35.00;
             break;
         case 4:
-            price = 12.00;
+            price = 33.00;
             break;
         case 5:
+            price = 31.00;
+            break;
+        case 6:
+            price = 29.00;
+            break;
+        case 7:
+            price = 27.00;
+            break;
+        case 8:
+            price = 25.00;
+            break;
+        case 9:
+            price = 23.00;
+            break;
+        case 10:
+            price = 21.00;
+            break;
+        case 11: 
+            price = 19.00;
+            break;
+        case 12:
+            price = 17.00;
+            break;
+        case 13:
+            price = 15.00;
+            break;
+        case 14:
+            price = 13.00;
+            break;
+        case 15:
+            price = 11.00;
+            break;
+        case 16: 
+            price = 11.00;
+            break;
+        case 17:
+            price = 11.00;
+            break;
+        case 18:
+            price = 11.00;
+            break;
+        case 19:
             JOptionPane.showMessageDialog(null, "Please select a valid destination.", "INVALID SELECTION", JOptionPane.ERROR_MESSAGE, userIcon);
             error = true;
             break;
-        case 6:
-            price = 12.00;
+        case 20:
+            price = 11.00;
             break;
         }
         break;
     case 2:
         switch (selectedDestination) {
         case 0:
-            price = 14.00;
+            price = 39.00;
             break;
         case 1:
-            price = 13.00;
+            price = 37.00;
             break;
         case 2:
-            price = 12.00;
+            price = 35.00;
             break;
         case 3:
-            price = 12.00;
+            price = 33.00;
             break;
         case 4:
+            price = 31.00;
+            break;
+        case 5:
+            price = 29.00;
+            break;
+        case 6:
+            price = 27.00;
+            break;
+        case 7:
+            price = 25.00;
+            break;
+        case 8:
+            price = 23.00;
+            break;
+        case 9:
+            price = 21.00;
+            break;
+        case 10:
+            price = 19.00;
+            break;
+        case 11: 
+            price = 17.00;
+            break;
+        case 12:
+            price = 15.00;
+            break;
+        case 13:
+            price = 13.00;
+            break;
+        case 14:
+            price = 11.00;
+            break;
+        case 15:
+            price = 11.00;
+            break;
+        case 16: 
+            price = 11.00;
+            break;
+        case 17:
+            price = 11.00;
+            break;
+        case 18:
             JOptionPane.showMessageDialog(null, "Please select a valid destination.", "INVALID SELECTION", JOptionPane.ERROR_MESSAGE, userIcon);
             error = true;
             break;
-        case 5:
-            price = 12.00;
+        case 19:
+            price = 11.00;
             break;
-        case 6:
-            price = 13.00;
+        case 20:
+            price = 11.00;
             break;
         }
         break;
     case 3:
         switch (selectedDestination) {
         case 0:
-            price = 13.00;
+            price = 37.00;
             break;
         case 1:
-            price = 13.00;
+            price = 35.00;
             break;
         case 2:
-            price = 12.00;
+            price = 33.00;
             break;
         case 3:
+            price = 31.00;
+            break;
+        case 4:
+            price = 29.00;
+            break;
+        case 5:
+            price = 27.00;
+            break;
+        case 6:
+            price = 25.00;
+            break;
+        case 7:
+            price = 23.00;
+            break;
+        case 8:
+            price = 21.00;
+            break;
+        case 9:
+            price = 19.00;
+            break;
+        case 10:
+            price = 17.00;
+            break;
+        case 11: 
+            price = 15.00;
+            break;
+        case 12:
+            price = 13.00;
+            break;
+        case 13:
+            price = 11.00;
+            break;
+        case 14:
+            price = 11.00;
+            break;
+        case 15:
+            price = 11.00;
+            break;
+        case 16: 
+            price = 11.00;
+            break;
+        case 17:
             JOptionPane.showMessageDialog(null, "Please select a valid destination.", "INVALID SELECTION", JOptionPane.ERROR_MESSAGE, userIcon);
             error = true;
             break;
-        case 4:
-            price = 12.00;
+        case 18:
+            price = 11.00;
             break;
-        case 5:
-            price = 12.00;
+        case 19:
+            price = 11.00;
             break;
-        case 6:
-            price = 13.00;
+        case 20:
+            price = 11.00;
             break;
         }
         break;
     case 4:
         switch (selectedDestination) {
         case 0:
-            price = 12.00;
+            price = 35.00;
             break;
         case 1:
-            price = 13.00;
+            price = 33.00;
             break;
         case 2:
+            price = 31.00;
+            break;
+        case 3:
+            price = 29.00;
+            break;
+        case 4:
+            price = 27.00;
+            break;
+        case 5:
+            price = 25.00;
+            break;
+        case 6:
+            price = 23.00;
+            break;
+        case 7:
+            price = 21.00;
+            break;
+        case 8:
+            price = 19.00;
+            break;
+        case 9:
+            price = 17.00;
+            break;
+        case 10:
+            price = 15.00;
+            break;
+        case 11: 
+            price = 13.00;
+            break;
+        case 12:
+            price = 11.00;
+            break;
+        case 13:
+            price = 11.00;
+            break;
+        case 14:
+            price = 11.00;
+            break;
+        case 15:
+            price = 11.00;
+            break;
+        case 16: 
             JOptionPane.showMessageDialog(null, "Please select a valid destination.", "INVALID SELECTION", JOptionPane.ERROR_MESSAGE, userIcon);
             error = true;
             break;
-        case 3:
-            price = 12.00;
+        case 17:
+            price = 11.00;
             break;
-        case 4:
-            price = 12.00;
+        case 18:
+            price = 11.00;
             break;
-        case 5:
-            price = 13.00;
+        case 19:
+            price = 11.00;
             break;
-        case 6:
-            price = 13.00;
+        case 20:
+            price = 11.00;
             break;
         }
         break;
     case 5:
         switch (selectedDestination) {
         case 0:
-            price = 12.00;
+            price = 33.00;
             break;
         case 1:
+            price = 31.00;
+            break;
+        case 2:
+            price = 29.00;
+            break;
+        case 3:
+            price = 27.00;
+            break;
+        case 4:
+            price = 25.00;
+            break;
+        case 5:
+            price = 23.00;
+            break;
+        case 6:
+            price = 21.00;
+            break;
+        case 7:
+            price = 19.00;
+            break;
+        case 8:
+            price = 17.00;
+            break;
+        case 9:
+            price = 15.00;
+            break;
+        case 10:
+            price = 13.00;
+            break;
+        case 11: 
+            price = 11.00;
+            break;
+        case 12:
+            price = 11.00;
+            break;
+        case 13:
+            price = 11.00;
+            break;
+        case 14:
+            price = 11.00;
+            break;
+        case 15:
             JOptionPane.showMessageDialog(null, "Please select a valid destination.", "INVALID SELECTION", JOptionPane.ERROR_MESSAGE, userIcon);
             error = true;
             break;
-        case 2:
+        case 16: 
+            price = 11.00;
+            break;
+        case 17:
+            price = 11.00;
+            break;
+        case 18:
+            price = 11.00;
+            break;
+        case 19:
+            price = 11.00;
+            break;
+        case 20:
             price = 13.00;
-            break;
-        case 3:
-            price = 13.00;
-            break;
-        case 4:
-            price = 13.00;
-            break;
-        case 5:
-            price = 14.00;
-            break;
-        case 6:
-            price = 15.25;
             break;
         }
         break;
     case 6:
         switch (selectedDestination) {
         case 0:
+            price = 31.00;
+            break;
+        case 1:
+            price = 29.00;
+            break;
+        case 2:
+            price = 27.00;
+            break;
+        case 3:
+            price = 25.00;
+            break;
+        case 4:
+            price = 23.00;
+            break;
+        case 5:
+            price = 21.00;
+            break;
+        case 6:
+            price = 19.00;
+            break;
+        case 7:
+            price = 17.00;
+            break;
+        case 8:
+            price = 15.00;
+            break;
+        case 9:
+            price = 13.00;
+            break;
+        case 10:
+            price = 11.00;
+            break;
+        case 11: 
+            price = 11.00;
+            break;
+        case 12:
+            price = 11.00;
+            break;
+        case 13:
+            price = 11.00;
+            break;
+        case 14:
             JOptionPane.showMessageDialog(null, "Please select a valid destination.", "INVALID SELECTION", JOptionPane.ERROR_MESSAGE, userIcon);
             error = true;
             break;
+        case 15:
+            price = 11.00;
+            break;
+        case 16: 
+            price = 11.00;
+            break;
+        case 17:
+            price = 11.00;
+            break;
+        case 18:
+            price = 11.00;
+            break;
+        case 19:
+            price = 13.00;
+            break;
+        case 20:
+            price = 15.00;
+            break;
+        }
+        break;
+    case 7:
+        switch (selectedDestination) {
+        case 0:
+            price = 29.00;
+            break;
         case 1:
-            price = 12.00;
+            price = 27.00;
             break;
         case 2:
+            price = 25.00;
+            break;
+        case 3:
+            price = 23.00;
+            break;
+        case 4:
+            price = 21.00;
+            break;
+        case 5:
+            price = 19.00;
+            break;
+        case 6:
+            price = 17.00;
+            break;
+        case 7:
+            price = 15.00;
+            break;
+        case 8:
             price = 13.00;
+            break;
+        case 9:
+            price = 11.00;
+            break;
+        case 10:
+            price = 11.00;
+            break;
+        case 11: 
+            price = 11.00;
+            break;
+        case 12:
+            price = 11.00;
+            break;
+        case 13:
+            JOptionPane.showMessageDialog(null, "Please select a valid destination.", "INVALID SELECTION", JOptionPane.ERROR_MESSAGE, userIcon);
+            error = true;
+            break;
+        case 14:
+            price = 11.00;
+            break;
+        case 15:
+            price = 11.00;
+            break;
+        case 16: 
+            price = 11.00;
+            break;
+        case 17:
+            price = 11.00;
+            break;
+        case 18:
+            price = 13.00;
+            break;
+        case 19:
+            price = 15.00;
+            break;
+        case 20:
+            price = 17.00;
+            break;
+        }break;
+    case 8:
+        switch (selectedDestination) {
+        case 0:
+            price = 27.00;
+            break;
+        case 1:
+            price = 25.00;
+            break;
+        case 2:
+            price = 23.00;
+            break;
+        case 3:
+            price = 21.00;
+            break;
+        case 4:
+            price = 19.00;
+            break;
+        case 5:
+            price = 17.00;
+            break;
+        case 6:
+            price = 15.00;
+            break;
+        case 7:
+            price = 13.00;
+            break;
+        case 8:
+            price = 11.00;
+            break;
+        case 9:
+            price = 11.00;
+            break;
+        case 10:
+            price = 11.00;
+            break;
+        case 11: 
+            price = 11.00;
+            break;
+        case 12:
+            JOptionPane.showMessageDialog(null, "Please select a valid destination.", "INVALID SELECTION", JOptionPane.ERROR_MESSAGE, userIcon);
+            error = true;
+            break;
+        case 13:
+            price = 11.00;
+            break;
+        case 14:
+            price = 11.00;
+            break;
+        case 15:
+            price = 11.00;
+            break;
+        case 16: 
+            price = 11.00;
+            break;
+        case 17:
+            price = 13.00;
+            break;
+        case 18:
+            price = 15.00;
+            break;
+        case 19:
+            price = 17.00;
+            break;
+        case 20:
+            price = 19.00;
+            break;
+        }break;
+    case 9:
+        switch (selectedDestination) {
+        case 0:
+            price = 25.00;
+            break;
+        case 1:
+            price = 23.00;
+            break;
+        case 2:
+            price = 21.00;
+            break;
+        case 3:
+            price = 19.00;
+            break;
+        case 4:
+            price = 17.00;
+            break;
+        case 5:
+            price = 15.00;
+            break;
+        case 6:
+            price = 13.00;
+            break;
+        case 7:
+            price = 11.00;
+            break;
+        case 8:
+            price = 11.00;
+            break;
+        case 9:
+            price = 11.00;
+            break;
+        case 10:
+            price = 11.00;
+            break;
+        case 11: 
+            JOptionPane.showMessageDialog(null, "Please select a valid destination.", "INVALID SELECTION", JOptionPane.ERROR_MESSAGE, userIcon);
+            error = true;
+            break;
+        case 12:
+            price = 11.00;
+            break;
+        case 13:
+            price = 11.00;
+            break;
+        case 14:
+            price = 11.00;
+            break;
+        case 15:
+            price = 11.00;
+            break;
+        case 16: 
+            price = 13.00;
+            break;
+        case 17:
+            price = 15.00;
+            break;
+        case 18:
+            price = 17.00;
+            break;
+        case 19:
+            price = 19.00;
+            break;
+        case 20:
+            price = 21.00;
+            break;
+        }break;
+    case 10:
+        switch (selectedDestination) {
+        case 0:
+            price = 23.00;
+            break;
+        case 1:
+            price = 21.00;
+            break;
+        case 2:
+            price = 19.00;
+            break;
+        case 3:
+            price = 17.00;
+            break;
+        case 4:
+            price = 15.00;
+            break;
+        case 5:
+            price = 13.00;
+            break;
+        case 6:
+            price = 11.00;
+            break;
+        case 7:
+            price = 11.00;
+            break;
+        case 8:
+            price = 11.00;
+            break;
+        case 9:
+            price = 11.00;
+            break;
+        case 10:
+            JOptionPane.showMessageDialog(null, "Please select a valid destination.", "INVALID SELECTION", JOptionPane.ERROR_MESSAGE, userIcon);
+            error = true;
+            break;
+        case 11: 
+            price = 11.00;
+            break;
+        case 12:
+            price = 11.00;
+            break;
+        case 13:
+            price = 11.00;
+            break;
+        case 14:
+            price = 11.00;
+            break;
+        case 15:
+            price = 13.00;
+            break;
+        case 16: 
+            price = 15.00;
+            break;
+        case 17:
+            price = 17.00;
+            break;
+        case 18:
+            price = 19.00;
+            break;
+        case 19:
+            price = 21.00;
+            break;
+        case 20:
+            price = 23.00;
+            break;
+        }break;
+    case 11:
+        switch (selectedDestination) {
+        case 0:
+            price = 21.00;
+            break;
+        case 1:
+            price = 19.00;
+            break;
+        case 2:
+            price = 17.00;
+            break;
+        case 3:
+            price = 15.00;
+            break;
+        case 4:
+            price = 13.00;
+            break;
+        case 5:
+            price = 11.00;
+            break;
+        case 6:
+            price = 11.00;
+            break;
+        case 7:
+            price = 11.00;
+            break;
+        case 8:
+            price = 11.00;
+            break;
+        case 9:
+            JOptionPane.showMessageDialog(null, "Please select a valid destination.", "INVALID SELECTION", JOptionPane.ERROR_MESSAGE, userIcon);
+            error = true;
+            break;
+        case 10:
+            price = 11.00;
+            break;
+        case 11: 
+            price = 11.00;
+            break;
+        case 12:
+            price = 11.00;
+            break;
+        case 13:
+            price = 11.00;
+            break;
+        case 14:
+            price = 13.00;
+            break;
+        case 15:
+            price = 15.00;
+            break;
+        case 16: 
+            price = 17.00;
+            break;
+        case 17:
+            price = 19.00;
+            break;
+        case 18:
+            price = 21.00;
+            break;
+        case 19:
+            price = 23.00;
+            break;
+        case 20:
+            price = 25.00;
+            break;
+        }break;
+    case 12:
+        switch (selectedDestination) {
+        case 0:
+            price = 19.00;
+            break;
+        case 1:
+            price = 17.00;
+            break;
+        case 2:
+            price = 15.00;
             break;
         case 3:
             price = 13.00;
             break;
         case 4:
-            price = 14.00;
+            price = 11.00;
             break;
         case 5:
-            price = 14.00;
+            price = 11.00;
             break;
         case 6:
-            price = 15.25;
+            price = 11.00;
             break;
-        }
-        break;
+        case 7:
+            price = 11.00;
+            break;
+        case 8:
+            JOptionPane.showMessageDialog(null, "Please select a valid destination.", "INVALID SELECTION", JOptionPane.ERROR_MESSAGE, userIcon);
+            error = true;
+            break;
+        case 9:
+            price = 11.00;
+            break;
+        case 10:
+            price = 11.00;
+            break;
+        case 11: 
+            price = 11.00;
+            break;
+        case 12:
+            price = 11.00;
+            break;
+        case 13:
+            price = 13.00;
+            break;
+        case 14:
+            price = 15.00;
+            break;
+        case 15:
+            price = 17.00;
+            break;
+        case 16: 
+            price = 19.00;
+            break;
+        case 17:
+            price = 21.00;
+            break;
+        case 18:
+            price = 23.00;
+            break;
+        case 19:
+            price = 25.00;
+            break;
+        case 20:
+            price = 27.00;
+            break;
+        }break;
+    case 13:
+        switch (selectedDestination) {
+        case 0:
+            price = 17.00;
+            break;
+        case 1:
+            price = 15.00;
+            break;
+        case 2:
+            price = 13.00;
+            break;
+        case 3:
+            price = 11.00;
+            break;
+        case 4:
+            price = 11.00;
+            break;
+        case 5:
+            price = 11.00;
+            break;
+        case 6:
+            price = 11.00;
+            break;
+        case 7:
+            JOptionPane.showMessageDialog(null, "Please select a valid destination.", "INVALID SELECTION", JOptionPane.ERROR_MESSAGE, userIcon);
+            error = true;
+            break;
+        case 8:
+            price = 11.00;
+            break;
+        case 9:
+            price = 11.00;
+            break;
+        case 10:
+            price = 11.00;
+            break;
+        case 11: 
+            price = 11.00;
+            break;
+        case 12:
+            price = 13.00;
+            break;
+        case 13:
+            price = 15.00;
+            break;
+        case 14:
+            price = 17.00;
+            break;
+        case 15:
+            price = 19.00;
+            break;
+        case 16: 
+            price = 21.00;
+            break;
+        case 17:
+            price = 23.00;
+            break;
+        case 18:
+            price = 25.00;
+            break;
+        case 19:
+            price = 27.00;
+            break;
+        case 20:
+            price = 29.00;
+            break;
+        }break;
+    case 14:
+        switch (selectedDestination) {
+        case 0:
+            price = 15.00;
+            break;
+        case 1:
+            price = 13.00;
+            break;
+        case 2:
+            price = 11.00;
+            break;
+        case 3:
+            price = 11.00;
+            break;
+        case 4:
+            price = 11.00;
+            break;
+        case 5:
+            price = 11.00;
+            break;
+        case 6:
+            JOptionPane.showMessageDialog(null, "Please select a valid destination.", "INVALID SELECTION", JOptionPane.ERROR_MESSAGE, userIcon);
+            error = true;
+            break;
+        case 7:
+            price = 11.00;
+            break;
+        case 8:
+            price = 11.00;
+            break;
+        case 9:
+            price = 11.00;
+            break;
+        case 10:
+            price = 11.00;
+            break;
+        case 11: 
+            price = 13.00;
+            break;
+        case 12:
+            price = 15.00;
+            break;
+        case 13:
+            price = 17.00;
+            break;
+        case 14:
+            price = 19.00;
+            break;
+        case 15:
+            price = 21.00;
+            break;
+        case 16: 
+            price = 23.00;
+            break;
+        case 17:
+            price = 25.00;
+            break;
+        case 18:
+            price = 27.00;
+            break;
+        case 19:
+            price = 29.00;
+            break;
+        case 20:
+            price = 31.00;
+            break;
+        }break;
+    case 15:
+        switch (selectedDestination) {
+        case 0:
+            price = 13.00;
+            break;
+        case 1:
+            price = 11.00;
+            break;
+        case 2:
+            price = 11.00;
+            break;
+        case 3:
+            price = 11.00;
+            break;
+        case 4:
+            price = 11.00;
+            break;
+        case 5:
+            JOptionPane.showMessageDialog(null, "Please select a valid destination.", "INVALID SELECTION", JOptionPane.ERROR_MESSAGE, userIcon);
+            error = true;
+            break;
+        case 6:
+            price = 11.00;
+            break;
+        case 7:
+            price = 11.00;
+            break;
+        case 8:
+            price = 11.00;
+            break;
+        case 9:
+            price = 11.00;
+            break;
+        case 10:
+            price = 13.00;
+            break;
+        case 11: 
+            price = 15.00;
+            break;
+        case 12:
+            price = 17.00;
+            break;
+        case 13:
+            price = 19.00;
+            break;
+        case 14:
+            price = 21.00;
+            break;
+        case 15:
+            price = 23.00;
+            break;
+        case 16: 
+            price = 25.00;
+            break;
+        case 17:
+            price = 27.00;
+            break;
+        case 18:
+            price = 29.00;
+            break;
+        case 19:
+            price = 31.00;
+            break;
+        case 20:
+            price = 33.00;
+            break;
+        }break;
+    case 16:
+        switch (selectedDestination) {
+        case 0:
+            price = 11.00;
+            break;
+        case 1:
+            price = 11.00;
+            break;
+        case 2:
+            price = 11.00;
+            break;
+        case 3:
+            price = 11.00;
+            break;
+        case 4:
+            JOptionPane.showMessageDialog(null, "Please select a valid destination.", "INVALID SELECTION", JOptionPane.ERROR_MESSAGE, userIcon);
+            error = true;
+            break;
+        case 5:
+            price = 11.00;
+            break;
+        case 6:
+            price = 11.00;
+            break;
+        case 7:
+            price = 11.00;
+            break;
+        case 8:
+            price = 11.00;
+            break;
+        case 9:
+            price = 13.00;
+            break;
+        case 10:
+            price = 15.00;
+            break;
+        case 11: 
+            price = 17.00;
+            break;
+        case 12:
+            price = 19.00;
+            break;
+        case 13:
+            price = 21.00;
+            break;
+        case 14:
+            price = 23.00;
+            break;
+        case 15:
+            price = 25.00;
+            break;
+        case 16: 
+            price = 27.00;
+            break;
+        case 17:
+            price = 29.00;
+            break;
+        case 18:
+            price = 31.00;
+            break;
+        case 19:
+            price = 33.00;
+            break;
+        case 20:
+            price = 35.00;
+            break;
+        }break;
+    case 17:
+        switch (selectedDestination) {
+        case 0:
+            price = 11.00;
+            break;
+        case 1:
+            price = 11.00;
+            break;
+        case 2:
+            price = 11.00;
+            break;
+        case 3:
+            JOptionPane.showMessageDialog(null, "Please select a valid destination.", "INVALID SELECTION", JOptionPane.ERROR_MESSAGE, userIcon);
+            error = true;
+            break;
+        case 4:
+            price = 11.00;
+            break;
+        case 5:
+            price = 11.00;
+            break;
+        case 6:
+            price = 11.00;
+            break;
+        case 7:
+            price = 11.00;
+            break;
+        case 8:
+            price = 13.00;
+            break;
+        case 9:
+            price = 15.00;
+            break;
+        case 10:
+            price = 17.00;
+            break;
+        case 11: 
+            price = 19.00;
+            break;
+        case 12:
+            price = 21.00;
+            break;
+        case 13:
+            price = 23.00;
+            break;
+        case 14:
+            price = 25.00;
+            break;
+        case 15:
+            price = 27.00;
+            break;
+        case 16: 
+            price = 29.00;
+            break;
+        case 17:
+            price = 31.00;
+            break;
+        case 18:
+            price = 33.00;
+            break;
+        case 19:
+            price = 35.00;
+            break;
+        case 20:
+            price = 37.00;
+            break;
+        }break;
+    case 18:
+        switch (selectedDestination) {
+        case 0:
+            price = 11.00;
+            break;
+        case 1:
+            price = 11.00;
+            break;
+        case 2:
+            JOptionPane.showMessageDialog(null, "Please select a valid destination.", "INVALID SELECTION", JOptionPane.ERROR_MESSAGE, userIcon);
+            error = true;
+            break;
+        case 3:
+            price = 11.00;
+            break;
+        case 4:
+            price = 11.00;
+            break;
+        case 5:
+            price = 11.00;
+            break;
+        case 6:
+            price = 11.00;
+            break;
+        case 7:
+            price = 13.00;
+            break;
+        case 8:
+            price = 15.00;
+            break;
+        case 9:
+            price = 17.00;
+            break;
+        case 10:
+            price = 19.00;
+            break;
+        case 11: 
+            price = 21.00;
+            break;
+        case 12:
+            price = 23.00;
+            break;
+        case 13:
+            price = 25.00;
+            break;
+        case 14:
+            price = 27.00;
+            break;
+        case 15:
+            price = 29.00;
+            break;
+        case 16: 
+            price = 31.00;
+            break;
+        case 17:
+            price = 33.00;
+            break;
+        case 18:
+            price = 35.00;
+            break;
+        case 19:
+            price = 37.00;
+            break;
+        case 20:
+            price = 39.00;
+            break;
+        }break;
+    case 19:
+        switch (selectedDestination) {
+        case 0:
+            price = 11.00;
+            break;
+        case 1:
+            JOptionPane.showMessageDialog(null, "Please select a valid destination.", "INVALID SELECTION", JOptionPane.ERROR_MESSAGE, userIcon);
+            error = true;
+            break;
+        case 2:
+            price = 11.00;
+            break;
+        case 3:
+            price = 11.00;
+            break;
+        case 4:
+            price = 11.00;
+            break;
+        case 5:
+            price = 11.00;
+            break;
+        case 6:
+            price = 13.00;
+            break;
+        case 7:
+            price = 15.00;
+            break;
+        case 8:
+            price = 17.00;
+            break;
+        case 9:
+            price = 19.00;
+            break;
+        case 10:
+            price = 21.00;
+            break;
+        case 11: 
+            price = 23.00;
+            break;
+        case 12:
+            price = 25.00;
+            break;
+        case 13:
+            price = 27.00;
+            break;
+        case 14:
+            price = 29.00;
+            break;
+        case 15:
+            price = 31.00;
+            break;
+        case 16: 
+            price = 33.00;
+            break;
+        case 17:
+            price = 35.00;
+            break;
+        case 18:
+            price = 37.00;
+            break;
+        case 19:
+            price = 39.00;
+            break;
+        case 20:
+            price = 41.00;
+            break;
+        }break;
+    case 20:
+        switch (selectedDestination) {
+        case 0:
+            JOptionPane.showMessageDialog(null, "Please select a valid destination.", "INVALID SELECTION", JOptionPane.ERROR_MESSAGE, userIcon);
+            error = true;
+            break;
+        case 1:
+            price = 11.00;
+            break;
+        case 2:
+            price = 11.00;
+            break;
+        case 3:
+            price = 11.00;
+            break;
+        case 4:
+            price = 11.00;
+            break;
+        case 5:
+            price = 13.00;
+            break;
+        case 6:
+            price = 15.00;
+            break;
+        case 7:
+            price = 17.00;
+            break;
+        case 8:
+            price = 19.00;
+            break;
+        case 9:
+            price = 21.00;
+            break;
+        case 10:
+            price = 23.00;
+            break;
+        case 11: 
+            price = 25.00;
+            break;
+        case 12:
+            price = 27.00;
+            break;
+        case 13:
+            price = 29.00;
+            break;
+        case 14:
+            price = 31.00;
+            break;
+        case 15:
+            price = 33.00;
+            break;
+        case 16: 
+            price = 35.00;
+            break;
+        case 17:
+            price = 37.00;
+            break;
+        case 18:
+            price = 39.00;
+            break;
+        case 19:
+            price = 41.00;
+            break;
+        case 20:
+            price = 43.00;
+            break;
+        }break;
     }
     if(discount.isSelected()){
         price *= 0.8;

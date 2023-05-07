@@ -204,7 +204,7 @@ public class Receipt extends javax.swing.JFrame {
         route1.setFont(new java.awt.Font("JetBrains Mono ExtraBold", 0, 14)); // NOI18N
         route1.setForeground(new java.awt.Color(38, 38, 38));
         route1.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        route1.setText("CUBAO TO COGEO");
+        route1.setText("SM AURA TO COGEO");
         jPanel1.add(route1, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 210, 210, 40));
 
         origin.setFont(new java.awt.Font("JetBrains Mono ExtraBold", 0, 14)); // NOI18N
