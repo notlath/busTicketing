@@ -112,29 +112,30 @@ public class CustomerDetails extends javax.swing.JFrame {
 
         nameLabel.setFont(new java.awt.Font("Aftika Bold", 0, 18)); // NOI18N
         nameLabel.setForeground(new java.awt.Color(255, 255, 255));
-        nameLabel.setText(" ");
-        jPanel1.add(nameLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 210, 270, -1));
+        nameLabel.setText("sample");
+        jPanel1.add(nameLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 220, 270, -1));
 
         emailLabel.setFont(new java.awt.Font("Aftika Regular", 0, 12)); // NOI18N
         emailLabel.setForeground(new java.awt.Color(255, 255, 255));
-        emailLabel.setText(" ");
-        jPanel1.add(emailLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 250, 270, -1));
+        emailLabel.setText("sample");
+        jPanel1.add(emailLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 260, 270, -1));
 
         contactLabel.setFont(new java.awt.Font("Aftika Light", 0, 12)); // NOI18N
         contactLabel.setForeground(new java.awt.Color(255, 255, 255));
-        contactLabel.setText(" ");
-        jPanel1.add(contactLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 280, 270, -1));
+        contactLabel.setText("sample");
+        jPanel1.add(contactLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 290, 270, -1));
 
         jButton1.setBackground(new java.awt.Color(46, 72, 187));
         jButton1.setFont(new java.awt.Font("Aftika Regular", 0, 14)); // NOI18N
         jButton1.setForeground(new java.awt.Color(255, 255, 255));
         jButton1.setText("Sign Out");
+        jButton1.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
             }
         });
-        jPanel1.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 320, -1, -1));
+        jPanel1.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 320, 100, -1));
 
         ticketdetails.setFont(new java.awt.Font("Aftika ExtraBold", 0, 36)); // NOI18N
         ticketdetails.setForeground(new java.awt.Color(255, 255, 255));
@@ -153,7 +154,7 @@ public class CustomerDetails extends javax.swing.JFrame {
         jPanel1.add(back, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 20, 107, 51));
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/assets/customerdetails.png"))); // NOI18N
-        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 210, 130, 130));
+        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 220, 130, 130));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
