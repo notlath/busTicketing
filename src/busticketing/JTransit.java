@@ -60,7 +60,7 @@ public class JTransit extends javax.swing.JFrame {
         name.setFont(new java.awt.Font("Akira Expanded", 2, 48)); // NOI18N
         name.setForeground(new java.awt.Color(255, 255, 255));
         name.setText("JTransit");
-        jPanel1.add(name, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 60, -1, 38));
+        jPanel1.add(name, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 60, -1, 46));
 
         subname.setFont(new java.awt.Font("Aftika Light", 0, 16)); // NOI18N
         subname.setForeground(new java.awt.Color(255, 255, 255));

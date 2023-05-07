@@ -64,7 +64,7 @@ public class BusRoute extends javax.swing.JFrame {
         jLabel1.setFont(new java.awt.Font("Aftika ExtraBold", 0, 36)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setText("BUS ROUTES");
-        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 160, 250, 36));
+        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 170, 250, 36));
 
         options.setBackground(new java.awt.Color(251, 251, 253));
         options.setFont(new java.awt.Font("Aftika Light", 0, 14)); // NOI18N
@@ -79,7 +79,7 @@ public class BusRoute extends javax.swing.JFrame {
                 optionsActionPerformed(evt);
             }
         });
-        jPanel1.add(options, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 220, 150, 30));
+        jPanel1.add(options, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 230, 150, 30));
 
         confirm.setBackground(new java.awt.Color(46, 72, 187));
         confirm.setFont(new java.awt.Font("Aftika Bold", 0, 14)); // NOI18N
@@ -90,7 +90,7 @@ public class BusRoute extends javax.swing.JFrame {
                 confirmActionPerformed(evt);
             }
         });
-        jPanel1.add(confirm, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 360, 110, 50));
+        jPanel1.add(confirm, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 370, 110, 50));
 
         back.setBackground(new java.awt.Color(246, 247, 252));
         back.setFont(new java.awt.Font("Aftika Bold", 0, 14)); // NOI18N
@@ -101,19 +101,19 @@ public class BusRoute extends javax.swing.JFrame {
                 backActionPerformed(evt);
             }
         });
-        jPanel1.add(back, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 360, 120, 50));
+        jPanel1.add(back, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 370, 120, 50));
 
         TO.setFont(new java.awt.Font("Aftika SemiBold", 0, 18)); // NOI18N
         TO.setForeground(new java.awt.Color(255, 255, 255));
         TO.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         TO.setText("TO:");
-        jPanel1.add(TO, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 270, 60, 30));
+        jPanel1.add(TO, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 280, 60, 30));
 
         FROM1.setFont(new java.awt.Font("Aftika SemiBold", 0, 18)); // NOI18N
         FROM1.setForeground(new java.awt.Color(255, 255, 255));
         FROM1.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         FROM1.setText("FROM:");
-        jPanel1.add(FROM1, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 220, -1, 30));
+        jPanel1.add(FROM1, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 230, -1, 30));
 
         destination.setBackground(new java.awt.Color(251, 251, 253));
         destination.setFont(new java.awt.Font("Aftika Light", 0, 14)); // NOI18N
@@ -128,22 +128,22 @@ public class BusRoute extends javax.swing.JFrame {
                 destinationActionPerformed(evt);
             }
         });
-        jPanel1.add(destination, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 270, 150, 30));
+        jPanel1.add(destination, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 280, 150, 30));
 
         name1.setFont(new java.awt.Font("Akira Expanded", 2, 48)); // NOI18N
         name1.setForeground(new java.awt.Color(255, 255, 255));
         name1.setText("JTransit");
-        jPanel1.add(name1, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 50, -1, 46));
+        jPanel1.add(name1, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 60, -1, 46));
 
         subname1.setFont(new java.awt.Font("Aftika Light", 0, 16)); // NOI18N
         subname1.setForeground(new java.awt.Color(255, 255, 255));
         subname1.setText("Bus Ticketing System");
-        jPanel1.add(subname1, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 100, -1, -1));
+        jPanel1.add(subname1, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 110, -1, -1));
 
         discount.setBackground(new java.awt.Color(20, 31, 80));
-        discount.setFont(new java.awt.Font("Aftika SemiBold", 0, 14)); // NOI18N
+        discount.setFont(new java.awt.Font("Aftika SemiBold", 0, 11)); // NOI18N
         discount.setForeground(new java.awt.Color(255, 255, 255));
-        discount.setText("Student");
+        discount.setText("STUDENT");
         discount.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         discount.addChangeListener(new javax.swing.event.ChangeListener() {
             public void stateChanged(javax.swing.event.ChangeEvent evt) {
@@ -155,7 +155,7 @@ public class BusRoute extends javax.swing.JFrame {
                 discountActionPerformed(evt);
             }
         });
-        jPanel1.add(discount, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 310, 110, 30));
+        jPanel1.add(discount, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 320, 110, 30));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);

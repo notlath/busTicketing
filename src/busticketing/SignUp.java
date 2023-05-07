@@ -59,33 +59,33 @@ public class SignUp extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setTitle("Create Account");
         setResizable(false);
+        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jPanel1.setBackground(new java.awt.Color(20, 31, 80));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jPanel2.setBackground(new java.awt.Color(246, 247, 252));
-        jPanel2.setPreferredSize(new java.awt.Dimension(736, 473));
         jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         ticketdetails.setFont(new java.awt.Font("Aftika ExtraBold", 0, 36)); // NOI18N
         ticketdetails.setForeground(new java.awt.Color(20, 31, 80));
         ticketdetails.setText("SIGN UP");
-        jPanel2.add(ticketdetails, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 30, -1, -1));
+        jPanel2.add(ticketdetails, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 20, -1, -1));
 
         FROM2.setFont(new java.awt.Font("Aftika Bold", 0, 14)); // NOI18N
         FROM2.setForeground(new java.awt.Color(20, 31, 80));
         FROM2.setText("CONTACT NO.");
-        jPanel2.add(FROM2, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 160, -1, 36));
+        jPanel2.add(FROM2, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 150, -1, 36));
 
         FROM3.setFont(new java.awt.Font("Aftika Bold", 0, 14)); // NOI18N
         FROM3.setForeground(new java.awt.Color(20, 31, 80));
         FROM3.setText("EMAIL:");
-        jPanel2.add(FROM3, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 220, 70, 36));
+        jPanel2.add(FROM3, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 210, 70, 36));
 
         FROM4.setFont(new java.awt.Font("Aftika Bold", 0, 14)); // NOI18N
         FROM4.setForeground(new java.awt.Color(20, 31, 80));
         FROM4.setText("PASSWORD:");
-        jPanel2.add(FROM4, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 280, 110, 36));
+        jPanel2.add(FROM4, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 270, 110, 36));
 
         confirm.setBackground(new java.awt.Color(46, 72, 187));
         confirm.setFont(new java.awt.Font("Aftika Bold", 0, 14)); // NOI18N
@@ -96,22 +96,22 @@ public class SignUp extends javax.swing.JFrame {
                 confirmActionPerformed(evt);
             }
         });
-        jPanel2.add(confirm, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 430, 240, 40));
+        jPanel2.add(confirm, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 420, 240, 40));
 
         FROM6.setFont(new java.awt.Font("Aftika Bold", 0, 14)); // NOI18N
         FROM6.setForeground(new java.awt.Color(20, 31, 80));
         FROM6.setText("NAME:");
-        jPanel2.add(FROM6, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 100, -1, 36));
+        jPanel2.add(FROM6, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 90, -1, 36));
 
         FROM7.setFont(new java.awt.Font("Aftika Light", 0, 12)); // NOI18N
         FROM7.setForeground(new java.awt.Color(20, 31, 80));
         FROM7.setText("Already have an account?");
-        jPanel2.add(FROM7, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 80, -1, -1));
+        jPanel2.add(FROM7, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 70, -1, -1));
 
         FROM8.setFont(new java.awt.Font("Aftika Bold", 0, 14)); // NOI18N
         FROM8.setForeground(new java.awt.Color(20, 31, 80));
         FROM8.setText("CONFIRM PASSWORD:");
-        jPanel2.add(FROM8, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 340, 190, 36));
+        jPanel2.add(FROM8, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 330, 190, 36));
 
         jButton1.setBackground(new java.awt.Color(246, 247, 252));
         jButton1.setFont(new java.awt.Font("Aftika SemiBold", 0, 12)); // NOI18N
@@ -123,25 +123,25 @@ public class SignUp extends javax.swing.JFrame {
                 jButton1ActionPerformed(evt);
             }
         });
-        jPanel2.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 80, 50, -1));
+        jPanel2.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 70, 50, -1));
 
         match.setFont(new java.awt.Font("Aftika SemiBold", 2, 12)); // NOI18N
         match.setForeground(new java.awt.Color(255, 51, 51));
-        jPanel2.add(match, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 400, 200, 20));
+        jPanel2.add(match, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 390, 200, 20));
 
         regPass.setFont(new java.awt.Font("Aftika Light", 0, 12)); // NOI18N
         regPass.setForeground(new java.awt.Color(20, 31, 80));
-        regPass.setBorder(javax.swing.BorderFactory.createCompoundBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(20, 31, 80)), javax.swing.BorderFactory.createEmptyBorder(8, 8, 8, 8)));
+        regPass.setBorder(javax.swing.BorderFactory.createCompoundBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(220, 224, 243)), javax.swing.BorderFactory.createEmptyBorder(8, 8, 8, 8)));
         regPass.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 regPassActionPerformed(evt);
             }
         });
-        jPanel2.add(regPass, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 310, 240, 30));
+        jPanel2.add(regPass, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 300, 240, 30));
 
         txtPass.setFont(new java.awt.Font("Aftika Light", 0, 12)); // NOI18N
         txtPass.setForeground(new java.awt.Color(20, 31, 80));
-        txtPass.setBorder(javax.swing.BorderFactory.createCompoundBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(20, 31, 80)), javax.swing.BorderFactory.createEmptyBorder(8, 8, 8, 8)));
+        txtPass.setBorder(javax.swing.BorderFactory.createCompoundBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(220, 224, 243)), javax.swing.BorderFactory.createEmptyBorder(8, 8, 8, 8)));
         txtPass.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtPassActionPerformed(evt);
@@ -158,45 +158,36 @@ public class SignUp extends javax.swing.JFrame {
                 txtPassKeyTyped(evt);
             }
         });
-        jPanel2.add(txtPass, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 370, 240, 30));
+        jPanel2.add(txtPass, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 360, 240, 30));
 
         regName.setFont(new java.awt.Font("Aftika Light", 0, 12)); // NOI18N
-        regName.setBorder(javax.swing.BorderFactory.createCompoundBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(20, 31, 80)), javax.swing.BorderFactory.createEmptyBorder(8, 8, 8, 8)));
-        jPanel2.add(regName, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 130, 240, 30));
+        regName.setBorder(javax.swing.BorderFactory.createCompoundBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(220, 224, 243)), javax.swing.BorderFactory.createEmptyBorder(8, 8, 8, 8)));
+        jPanel2.add(regName, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 120, 240, 30));
 
         regContact.setFont(new java.awt.Font("Aftika Light", 0, 12)); // NOI18N
-        regContact.setBorder(javax.swing.BorderFactory.createCompoundBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(20, 31, 80)), javax.swing.BorderFactory.createEmptyBorder(8, 8, 8, 8)));
-        jPanel2.add(regContact, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 190, 240, 30));
+        regContact.setBorder(javax.swing.BorderFactory.createCompoundBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(220, 224, 243)), javax.swing.BorderFactory.createEmptyBorder(8, 8, 8, 8)));
+        jPanel2.add(regContact, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 180, 240, 30));
 
         txtUser.setFont(new java.awt.Font("Aftika Light", 0, 12)); // NOI18N
-        txtUser.setBorder(javax.swing.BorderFactory.createCompoundBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(20, 31, 80)), javax.swing.BorderFactory.createEmptyBorder(8, 8, 8, 8)));
-        jPanel2.add(txtUser, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 250, 240, 30));
+        txtUser.setBorder(javax.swing.BorderFactory.createCompoundBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(220, 224, 243)), javax.swing.BorderFactory.createEmptyBorder(8, 8, 8, 8)));
+        jPanel2.add(txtUser, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 240, 240, 30));
 
-        jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 330, 510));
+        jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 340, 500));
 
         name1.setFont(new java.awt.Font("Akira Expanded", 2, 48)); // NOI18N
         name1.setForeground(new java.awt.Color(255, 255, 255));
         name1.setText("JTransit");
-        jPanel1.add(name1, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 200, -1, -1));
+        jPanel1.add(name1, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 200, 330, 50));
 
         FROM5.setFont(new java.awt.Font("Aftika SemiBold", 0, 14)); // NOI18N
         FROM5.setForeground(new java.awt.Color(255, 255, 255));
         FROM5.setText("Start your journey with us.");
-        jPanel1.add(FROM5, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 260, 210, 36));
+        jPanel1.add(FROM5, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 260, 210, 30));
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/assets/landing-page.png"))); // NOI18N
-        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, -10, 460, 520));
+        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 0, 450, 500));
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 784, javax.swing.GroupLayout.PREFERRED_SIZE)
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 502, javax.swing.GroupLayout.PREFERRED_SIZE)
-        );
+        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 784, 500));
 
         pack();
         setLocationRelativeTo(null);
