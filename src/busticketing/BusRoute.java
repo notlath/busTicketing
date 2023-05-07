@@ -8,6 +8,7 @@ import java.awt.Color;
 import javax.swing.ImageIcon;
 import javax.swing.JOptionPane;
 import javax.swing.UIManager;
+import javax.swing.UnsupportedLookAndFeelException;
 import javax.swing.plaf.ColorUIResource;
 
 public class BusRoute extends javax.swing.JFrame {
@@ -28,6 +29,7 @@ public class BusRoute extends javax.swing.JFrame {
             UIManager.put("OptionPane.messageForeground", new ColorUIResource(246, 247, 252));
             UIManager.put("Button.background", new Color(246, 247, 252));
             UIManager.put("Button.foreground", new Color(46, 72, 187));
+            UIManager.put("ToggleButton.select", Color.RED);
         }
 
     /**
@@ -54,6 +56,7 @@ public class BusRoute extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Manage Bus Routes");
         setBackground(new java.awt.Color(153, 255, 255));
+        setResizable(false);
 
         jPanel1.setBackground(new java.awt.Color(20, 31, 80));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -63,8 +66,9 @@ public class BusRoute extends javax.swing.JFrame {
         jLabel1.setText("BUS ROUTES");
         jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 160, 250, 36));
 
+        options.setBackground(new java.awt.Color(251, 251, 253));
         options.setFont(new java.awt.Font("Aftika Light", 0, 14)); // NOI18N
-        options.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "SM Aura", "Kalayaan Ave.", "Bagong Ilog", "Lanuza Ave.", "Hypermarket", "Ortigas Ave.", "Wilcon Depot", "Eastwood", "Libis", "IVC Flyover", "SM Marikina", "Ligaya", "Sta. Lucia", "Vermont", "SM Masinag", "Maries Village", "SM Cherry Antipolo", "Pagral", "Cogeo Gate 1", "Northville", "Cogeo Gate 2" }));
+        options.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "SM Aura", "Kalayaan Ave.", "Bagong Ilog", "Lanuza Ave.", "Hypermarket", "Ortigas Ave.", "Wilcon Depot", "Eastwood", "Libis", "IVC Flyover", "SM Marikina", "Ligaya", "Sta. Lucia", "Vermont", "SM Masinag", "Maries Village", "SM Cherry Antipolo", "Pagrai", "Cogeo Gate 1", "Northville", "Cogeo Gate 2" }));
         options.addContainerListener(new java.awt.event.ContainerAdapter() {
             public void componentRemoved(java.awt.event.ContainerEvent evt) {
                 optionsComponentRemoved(evt);
@@ -75,7 +79,7 @@ public class BusRoute extends javax.swing.JFrame {
                 optionsActionPerformed(evt);
             }
         });
-        jPanel1.add(options, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 230, 150, 30));
+        jPanel1.add(options, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 220, 150, 30));
 
         confirm.setBackground(new java.awt.Color(46, 72, 187));
         confirm.setFont(new java.awt.Font("Aftika Bold", 0, 14)); // NOI18N
@@ -86,8 +90,9 @@ public class BusRoute extends javax.swing.JFrame {
                 confirmActionPerformed(evt);
             }
         });
-        jPanel1.add(confirm, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 370, 107, 50));
+        jPanel1.add(confirm, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 360, 110, 50));
 
+        back.setBackground(new java.awt.Color(246, 247, 252));
         back.setFont(new java.awt.Font("Aftika Bold", 0, 14)); // NOI18N
         back.setForeground(new java.awt.Color(20, 31, 80));
         back.setText("BACK");
@@ -96,22 +101,23 @@ public class BusRoute extends javax.swing.JFrame {
                 backActionPerformed(evt);
             }
         });
-        jPanel1.add(back, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 370, 107, 50));
+        jPanel1.add(back, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 360, 120, 50));
 
         TO.setFont(new java.awt.Font("Aftika SemiBold", 0, 18)); // NOI18N
         TO.setForeground(new java.awt.Color(255, 255, 255));
         TO.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         TO.setText("TO:");
-        jPanel1.add(TO, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 280, 60, 30));
+        jPanel1.add(TO, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 270, 60, 30));
 
         FROM1.setFont(new java.awt.Font("Aftika SemiBold", 0, 18)); // NOI18N
         FROM1.setForeground(new java.awt.Color(255, 255, 255));
         FROM1.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         FROM1.setText("FROM:");
-        jPanel1.add(FROM1, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 230, -1, 30));
+        jPanel1.add(FROM1, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 220, -1, 30));
 
+        destination.setBackground(new java.awt.Color(251, 251, 253));
         destination.setFont(new java.awt.Font("Aftika Light", 0, 14)); // NOI18N
-        destination.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Cogeo Gate 2", "Northville", "Cogeo Gate 1", "Pagral", "SM Cherry Antipolo", "Maries Village", "SM Masinag", "Vermont", "Sta. Lucia", "Ligaya", "SM Marikina", "IVC Flyover", "Libis", "Eastwood", "Wilcon Depot", "Ortigas Ave.", "Hypermarket", "Lanuza Ave.", "Bagong Ilog", "Kalayaan Ave.", "SM Aura" }));
+        destination.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Cogeo Gate 2", "Northville", "Cogeo Gate 1", "Pagrai", "SM Cherry Antipolo", "Maries Village", "SM Masinag", "Vermont", "Sta. Lucia", "Ligaya", "SM Marikina", "IVC Flyover", "Libis", "Eastwood", "Wilcon Depot", "Ortigas Ave.", "Hypermarket", "Lanuza Ave.", "Bagong Ilog", "Kalayaan Ave.", "SM Aura" }));
         destination.addContainerListener(new java.awt.event.ContainerAdapter() {
             public void componentRemoved(java.awt.event.ContainerEvent evt) {
                 destinationComponentRemoved(evt);
@@ -122,17 +128,17 @@ public class BusRoute extends javax.swing.JFrame {
                 destinationActionPerformed(evt);
             }
         });
-        jPanel1.add(destination, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 280, 150, 30));
+        jPanel1.add(destination, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 270, 150, 30));
 
         name1.setFont(new java.awt.Font("Akira Expanded", 2, 48)); // NOI18N
         name1.setForeground(new java.awt.Color(255, 255, 255));
         name1.setText("JTransit");
-        jPanel1.add(name1, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 50, -1, 46));
+        jPanel1.add(name1, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 50, -1, 46));
 
         subname1.setFont(new java.awt.Font("Aftika Light", 0, 16)); // NOI18N
         subname1.setForeground(new java.awt.Color(255, 255, 255));
         subname1.setText("Bus Ticketing System");
-        jPanel1.add(subname1, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 100, -1, -1));
+        jPanel1.add(subname1, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 100, -1, -1));
 
         discount.setBackground(new java.awt.Color(20, 31, 80));
         discount.setFont(new java.awt.Font("Aftika SemiBold", 0, 14)); // NOI18N
@@ -149,7 +155,7 @@ public class BusRoute extends javax.swing.JFrame {
                 discountActionPerformed(evt);
             }
         });
-        jPanel1.add(discount, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 320, 110, 30));
+        jPanel1.add(discount, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 310, 110, 30));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -1633,11 +1639,7 @@ public class BusRoute extends javax.swing.JFrame {
     }//GEN-LAST:event_discountActionPerformed
 
     private void discountStateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_discountStateChanged
-    if (discount.isSelected()){
-       discountStudent = true;
-    }else {
-        discountStudent = false;
-    }
+        
     }//GEN-LAST:event_discountStateChanged
 
     /**
@@ -1664,6 +1666,12 @@ public class BusRoute extends javax.swing.JFrame {
             java.util.logging.Logger.getLogger(BusRoute.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
             java.util.logging.Logger.getLogger(BusRoute.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        }
+        try{
+          javax.swing.UIManager.setLookAndFeel("com.sun.java.swing.plaf.windows.WindowsLookAndFeel");
+        }
+        catch(ClassNotFoundException | IllegalAccessException | InstantiationException | UnsupportedLookAndFeelException e){
+                System.out.println("UIManager Exception : "+e);
         }
         //</editor-fold>
 

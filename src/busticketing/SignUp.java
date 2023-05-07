@@ -41,20 +41,17 @@ public class SignUp extends javax.swing.JFrame {
         FROM2 = new javax.swing.JLabel();
         FROM3 = new javax.swing.JLabel();
         FROM4 = new javax.swing.JLabel();
-        jScrollPane1 = new javax.swing.JScrollPane();
-        regName = new javax.swing.JTextPane();
-        jScrollPane4 = new javax.swing.JScrollPane();
-        regContact = new javax.swing.JTextPane();
-        jScrollPane5 = new javax.swing.JScrollPane();
-        txtUser = new javax.swing.JTextPane();
-        txtPass = new javax.swing.JPasswordField();
-        regPass = new javax.swing.JPasswordField();
         confirm = new javax.swing.JButton();
         FROM6 = new javax.swing.JLabel();
         FROM7 = new javax.swing.JLabel();
         FROM8 = new javax.swing.JLabel();
         jButton1 = new javax.swing.JButton();
         match = new javax.swing.JLabel();
+        regPass = new javax.swing.JPasswordField();
+        txtPass = new javax.swing.JPasswordField();
+        regName = new javax.swing.JTextField();
+        regContact = new javax.swing.JTextField();
+        txtUser = new javax.swing.JTextField();
         name1 = new javax.swing.JLabel();
         FROM5 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
@@ -89,56 +86,6 @@ public class SignUp extends javax.swing.JFrame {
         FROM4.setForeground(new java.awt.Color(20, 31, 80));
         FROM4.setText("PASSWORD:");
         jPanel2.add(FROM4, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 280, 110, 36));
-
-        regName.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
-        regName.setFont(new java.awt.Font("Aftika Light", 0, 15)); // NOI18N
-        regName.setForeground(new java.awt.Color(20, 31, 80));
-        jScrollPane1.setViewportView(regName);
-
-        jPanel2.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 130, 240, 30));
-
-        regContact.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
-        regContact.setFont(new java.awt.Font("Aftika Light", 0, 15)); // NOI18N
-        regContact.setForeground(new java.awt.Color(20, 31, 80));
-        jScrollPane4.setViewportView(regContact);
-
-        jPanel2.add(jScrollPane4, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 190, 240, 30));
-
-        txtUser.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
-        txtUser.setFont(new java.awt.Font("Aftika Light", 0, 15)); // NOI18N
-        txtUser.setForeground(new java.awt.Color(20, 31, 80));
-        jScrollPane5.setViewportView(txtUser);
-
-        jPanel2.add(jScrollPane5, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 250, 240, 30));
-
-        txtPass.setFont(new java.awt.Font("Aftika Light", 0, 15)); // NOI18N
-        txtPass.setForeground(new java.awt.Color(20, 31, 80));
-        txtPass.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtPassActionPerformed(evt);
-            }
-        });
-        txtPass.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyPressed(java.awt.event.KeyEvent evt) {
-                txtPassKeyPressed(evt);
-            }
-            public void keyReleased(java.awt.event.KeyEvent evt) {
-                txtPassKeyReleased(evt);
-            }
-            public void keyTyped(java.awt.event.KeyEvent evt) {
-                txtPassKeyTyped(evt);
-            }
-        });
-        jPanel2.add(txtPass, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 370, 240, 30));
-
-        regPass.setFont(new java.awt.Font("Aftika Light", 0, 15)); // NOI18N
-        regPass.setForeground(new java.awt.Color(20, 31, 80));
-        regPass.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                regPassActionPerformed(evt);
-            }
-        });
-        jPanel2.add(regPass, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 310, 240, 30));
 
         confirm.setBackground(new java.awt.Color(46, 72, 187));
         confirm.setFont(new java.awt.Font("Aftika Bold", 0, 14)); // NOI18N
@@ -181,6 +128,49 @@ public class SignUp extends javax.swing.JFrame {
         match.setFont(new java.awt.Font("Aftika SemiBold", 2, 12)); // NOI18N
         match.setForeground(new java.awt.Color(255, 51, 51));
         jPanel2.add(match, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 400, 200, 20));
+
+        regPass.setFont(new java.awt.Font("Aftika Light", 0, 12)); // NOI18N
+        regPass.setForeground(new java.awt.Color(20, 31, 80));
+        regPass.setBorder(javax.swing.BorderFactory.createCompoundBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(20, 31, 80)), javax.swing.BorderFactory.createEmptyBorder(8, 8, 8, 8)));
+        regPass.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                regPassActionPerformed(evt);
+            }
+        });
+        jPanel2.add(regPass, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 310, 240, 30));
+
+        txtPass.setFont(new java.awt.Font("Aftika Light", 0, 12)); // NOI18N
+        txtPass.setForeground(new java.awt.Color(20, 31, 80));
+        txtPass.setBorder(javax.swing.BorderFactory.createCompoundBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(20, 31, 80)), javax.swing.BorderFactory.createEmptyBorder(8, 8, 8, 8)));
+        txtPass.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtPassActionPerformed(evt);
+            }
+        });
+        txtPass.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                txtPassKeyPressed(evt);
+            }
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                txtPassKeyReleased(evt);
+            }
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                txtPassKeyTyped(evt);
+            }
+        });
+        jPanel2.add(txtPass, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 370, 240, 30));
+
+        regName.setFont(new java.awt.Font("Aftika Light", 0, 12)); // NOI18N
+        regName.setBorder(javax.swing.BorderFactory.createCompoundBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(20, 31, 80)), javax.swing.BorderFactory.createEmptyBorder(8, 8, 8, 8)));
+        jPanel2.add(regName, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 130, 240, 30));
+
+        regContact.setFont(new java.awt.Font("Aftika Light", 0, 12)); // NOI18N
+        regContact.setBorder(javax.swing.BorderFactory.createCompoundBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(20, 31, 80)), javax.swing.BorderFactory.createEmptyBorder(8, 8, 8, 8)));
+        jPanel2.add(regContact, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 190, 240, 30));
+
+        txtUser.setFont(new java.awt.Font("Aftika Light", 0, 12)); // NOI18N
+        txtUser.setBorder(javax.swing.BorderFactory.createCompoundBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(20, 31, 80)), javax.swing.BorderFactory.createEmptyBorder(8, 8, 8, 8)));
+        jPanel2.add(txtUser, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 250, 240, 30));
 
         jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 330, 510));
 
@@ -347,16 +337,13 @@ public class SignUp extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel2;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
-    private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JScrollPane jScrollPane4;
-    private javax.swing.JScrollPane jScrollPane5;
     private javax.swing.JLabel match;
     private javax.swing.JLabel name1;
-    private javax.swing.JTextPane regContact;
-    private javax.swing.JTextPane regName;
+    private javax.swing.JTextField regContact;
+    private javax.swing.JTextField regName;
     private javax.swing.JPasswordField regPass;
     private javax.swing.JLabel ticketdetails;
     private javax.swing.JPasswordField txtPass;
-    private javax.swing.JTextPane txtUser;
+    private javax.swing.JTextField txtUser;
     // End of variables declaration//GEN-END:variables
 }

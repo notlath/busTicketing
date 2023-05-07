@@ -50,6 +50,7 @@ public class JTransit extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Home");
         setMinimumSize(new java.awt.Dimension(603, 436));
+        setResizable(false);
 
         jPanel1.setBackground(new java.awt.Color(20, 31, 80));
         jPanel1.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 64, 1));
@@ -66,7 +67,7 @@ public class JTransit extends javax.swing.JFrame {
         subname.setText("Bus Ticketing System");
         jPanel1.add(subname, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 110, -1, -1));
 
-        customer.setBackground(new java.awt.Color(246, 247, 252));
+        customer.setBackground(new java.awt.Color(251, 251, 253));
         customer.setFont(new java.awt.Font("Aftika Bold", 0, 14)); // NOI18N
         customer.setForeground(new java.awt.Color(51, 51, 51));
         customer.setText("Customer Details");
@@ -79,7 +80,7 @@ public class JTransit extends javax.swing.JFrame {
         });
         jPanel1.add(customer, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 240, 180, 51));
 
-        jButton3.setBackground(new java.awt.Color(246, 247, 252));
+        jButton3.setBackground(new java.awt.Color(251, 251, 253));
         jButton3.setFont(new java.awt.Font("Aftika Bold", 0, 14)); // NOI18N
         jButton3.setForeground(new java.awt.Color(51, 51, 51));
         jButton3.setText("Manage Bus Routes");
@@ -92,7 +93,7 @@ public class JTransit extends javax.swing.JFrame {
         });
         jPanel1.add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 310, 180, 51));
 
-        jButton5.setBackground(new java.awt.Color(246, 247, 252));
+        jButton5.setBackground(new java.awt.Color(251, 251, 253));
         jButton5.setFont(new java.awt.Font("Aftika Bold", 0, 14)); // NOI18N
         jButton5.setForeground(new java.awt.Color(51, 51, 51));
         jButton5.setText("Sign Out");

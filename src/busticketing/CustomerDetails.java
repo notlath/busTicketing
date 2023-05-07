@@ -94,6 +94,7 @@ public class CustomerDetails extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Customer Details");
+        setResizable(false);
 
         jPanel1.setBackground(new java.awt.Color(20, 31, 80));
         jPanel1.setMinimumSize(new java.awt.Dimension(603, 436));
@@ -176,8 +177,9 @@ public class CustomerDetails extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        dispose();
-        this.user.setVisible(true);
+    dispose();
+    User bus = new User();
+    bus.setVisible(true);
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void backActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backActionPerformed

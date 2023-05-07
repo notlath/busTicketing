@@ -108,7 +108,7 @@ public class User extends javax.swing.JFrame {
         uname.setFont(new java.awt.Font("Aftika Light", 0, 12)); // NOI18N
         uname.setForeground(new java.awt.Color(196, 197, 201));
         uname.setText("Email");
-        uname.setBorder(javax.swing.BorderFactory.createCompoundBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1), javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1)));
+        uname.setBorder(javax.swing.BorderFactory.createCompoundBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)), javax.swing.BorderFactory.createEmptyBorder(8, 8, 8, 8)));
         uname.addFocusListener(new java.awt.event.FocusAdapter() {
             public void focusGained(java.awt.event.FocusEvent evt) {
                 unameFocusGained(evt);
@@ -127,7 +127,7 @@ public class User extends javax.swing.JFrame {
         password.setFont(new java.awt.Font("Aftika Light", 0, 12)); // NOI18N
         password.setForeground(new java.awt.Color(196, 197, 201));
         password.setText("Password");
-        password.setBorder(javax.swing.BorderFactory.createCompoundBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1), javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1)));
+        password.setBorder(javax.swing.BorderFactory.createCompoundBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)), javax.swing.BorderFactory.createEmptyBorder(8, 8, 8, 8)));
         password.setEchoChar('\u0000');
         password.addFocusListener(new java.awt.event.FocusAdapter() {
             public void focusGained(java.awt.event.FocusEvent evt) {
