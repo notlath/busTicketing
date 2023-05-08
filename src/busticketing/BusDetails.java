@@ -3,11 +3,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
 package busticketing;
-import java.awt.Color;
 import java.text.DecimalFormat;
-import java.util.Random;
-import javax.swing.UIManager;
-import javax.swing.plaf.ColorUIResource;
 
 public class BusDetails extends javax.swing.JFrame {
 

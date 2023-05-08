@@ -1,7 +1,3 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
- */
 package busticketing;
 
 import javax.swing.JOptionPane;
@@ -345,7 +341,7 @@ public class SignUp extends javax.swing.JFrame {
 
     private void txtUserFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_txtUserFocusLost
         if (txtUser.getText().equals("")){
-            txtUser.setText("Contact No.");
+            txtUser.setText("Email");
             txtUser.setForeground(new java.awt.Color(196,197,201));
         }
     }//GEN-LAST:event_txtUserFocusLost
