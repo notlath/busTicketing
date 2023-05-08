@@ -226,35 +226,38 @@ public class User extends javax.swing.JFrame {
         setUI();
 
         try (Statement statement = sqlConn.createStatement()) {
-           ResultSet resultSet = statement.executeQuery("SELECT * FROM jtransit.users");
+            ResultSet resultSet = statement.executeQuery("SELECT * FROM jtransit.users");
 
-           while (resultSet.next()) {
-              String emailFromDB = resultSet.getString("email");
-              String passwordFromDB = resultSet.getString("password");
+            while (resultSet.next()) {
+                String emailFromDB = resultSet.getString("email");
+                String passwordFromDB = resultSet.getString("password");
 
-              if (email.equals(emailFromDB) && pword.equals(passwordFromDB)) {
-                 this.userName = emailFromDB;
-                 this.setVisible(false);
-                 JTransit bus = new JTransit(this);
-                 bus.setVisible(true);
-                 return;
-              } else if (email.equals(emailFromDB)) {
-                 validator = false;
+                if (email.equals(emailFromDB) && pword.equals(passwordFromDB)) {
+                    this.userName = emailFromDB;
+                    this.setVisible(false);
+                    JTransit bus = new JTransit(this);
+                    bus.setVisible(true);
+                    return;
+                } else if (email.equals(emailFromDB)) {
+                    validator = false;
 
-                 invalidCred.setText(LOGIN_FAILURE_MESSAGE);
-                 return;
-              } else if (!(email.equals(emailFromDB) && pword.equals(passwordFromDB))) {
-                 validator = false;
-                 invalidCred.setText("Incorrect username or password.");
-              }
-           }
+                    invalidCred.setText(LOGIN_FAILURE_MESSAGE);
+                    return;
+                } else {
+                    // incorrect credentials
+                    validator = false;
+                    invalidCred.setText("Incorrect username or password.");
+                }
+            }
 
-           // Check for empty email and password fields separately
-           if (email.equals("Email") || pword.equals("Password")) {
-              JOptionPane.showMessageDialog(null, "Please fill in all the required fields.", "Error", JOptionPane.ERROR_MESSAGE, userIcon);
-           }
+            // Check for empty email and password fields separately
+            if (email.equals("Email") || pword.equals("Password")) {
+                invalidCred.setText("");
+                JOptionPane.showMessageDialog(null, "Please fill in all the required fields.", "Error", JOptionPane.ERROR_MESSAGE, userIcon);
+
+            }
         } catch (SQLException e) {
-           System.out.print(e);
+            System.out.print(e);
         }
     }//GEN-LAST:event_jButton1ActionPerformed
 
