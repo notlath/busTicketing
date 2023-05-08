@@ -72,7 +72,7 @@ public class JTransit extends javax.swing.JFrame {
         customer.setBackground(new java.awt.Color(252, 252, 252));
         customer.setFont(new java.awt.Font("Aftika Bold", 0, 14)); // NOI18N
         customer.setForeground(new java.awt.Color(20, 31, 80));
-        customer.setText("Customer Details");
+        customer.setText("Biyahero Profile");
         customer.setBorder(null);
         customer.setBorderPainted(false);
         customer.addActionListener(new java.awt.event.ActionListener() {
@@ -85,7 +85,7 @@ public class JTransit extends javax.swing.JFrame {
         jButton3.setBackground(new java.awt.Color(252, 252, 252));
         jButton3.setFont(new java.awt.Font("Aftika Bold", 0, 14)); // NOI18N
         jButton3.setForeground(new java.awt.Color(20, 31, 80));
-        jButton3.setText("Manage Bus Routes");
+        jButton3.setText("Manage My Biyahe");
         jButton3.setBorder(null);
         jButton3.setBorderPainted(false);
         jButton3.addActionListener(new java.awt.event.ActionListener() {

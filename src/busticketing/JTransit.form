@@ -103,7 +103,7 @@
             <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="50" green="1f" red="14" type="rgb"/>
             </Property>
-            <Property name="text" type="java.lang.String" value="Customer Details"/>
+            <Property name="text" type="java.lang.String" value="Biyahero Profile"/>
             <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
               <Border info="null"/>
             </Property>
@@ -129,7 +129,7 @@
             <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="50" green="1f" red="14" type="rgb"/>
             </Property>
-            <Property name="text" type="java.lang.String" value="Manage Bus Routes"/>
+            <Property name="text" type="java.lang.String" value="Manage My Biyahe"/>
             <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
               <Border info="null"/>
             </Property>
