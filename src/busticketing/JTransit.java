@@ -106,7 +106,7 @@ public class JTransit extends javax.swing.JFrame {
                 jButton5ActionPerformed(evt);
             }
         });
-        jPanel1.add(jButton5, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 410, 250, 63));
+        jPanel1.add(jButton5, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 410, 247, 63));
 
         jLabel1.setFont(new java.awt.Font("Aftika SemiBold", 0, 18)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
