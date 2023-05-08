@@ -93,7 +93,7 @@ public class BusDetails extends javax.swing.JFrame {
                 printActionPerformed(evt);
             }
         });
-        jPanel1.add(print, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 390, 107, 51));
+        jPanel1.add(print, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 390, 160, 51));
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/assets/busdetails.png"))); // NOI18N
         jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 110, -1, -1));
@@ -101,13 +101,13 @@ public class BusDetails extends javax.swing.JFrame {
         back.setBackground(new java.awt.Color(246, 247, 252));
         back.setFont(new java.awt.Font("Aftika Bold", 0, 14)); // NOI18N
         back.setForeground(new java.awt.Color(20, 31, 80));
-        back.setText("BACK");
+        back.setText("BACK TO HOME");
         back.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 backActionPerformed(evt);
             }
         });
-        jPanel1.add(back, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 390, 107, 51));
+        jPanel1.add(back, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 390, 160, 51));
 
         name1.setFont(new java.awt.Font("Akira Expanded", 3, 28)); // NOI18N
         name1.setForeground(new java.awt.Color(255, 255, 255));

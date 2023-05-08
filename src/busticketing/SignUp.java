@@ -38,13 +38,8 @@ public class SignUp extends javax.swing.JFrame {
         jPanel1 = new javax.swing.JPanel();
         jPanel2 = new javax.swing.JPanel();
         ticketdetails = new javax.swing.JLabel();
-        FROM2 = new javax.swing.JLabel();
-        FROM3 = new javax.swing.JLabel();
-        FROM4 = new javax.swing.JLabel();
         confirm = new javax.swing.JButton();
-        FROM6 = new javax.swing.JLabel();
         FROM7 = new javax.swing.JLabel();
-        FROM8 = new javax.swing.JLabel();
         jButton1 = new javax.swing.JButton();
         match = new javax.swing.JLabel();
         regPass = new javax.swing.JPasswordField();
@@ -70,22 +65,7 @@ public class SignUp extends javax.swing.JFrame {
         ticketdetails.setFont(new java.awt.Font("Aftika ExtraBold", 0, 36)); // NOI18N
         ticketdetails.setForeground(new java.awt.Color(20, 31, 80));
         ticketdetails.setText("SIGN UP");
-        jPanel2.add(ticketdetails, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 20, -1, -1));
-
-        FROM2.setFont(new java.awt.Font("Aftika Bold", 0, 14)); // NOI18N
-        FROM2.setForeground(new java.awt.Color(20, 31, 80));
-        FROM2.setText("CONTACT NO.");
-        jPanel2.add(FROM2, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 150, -1, 36));
-
-        FROM3.setFont(new java.awt.Font("Aftika Bold", 0, 14)); // NOI18N
-        FROM3.setForeground(new java.awt.Color(20, 31, 80));
-        FROM3.setText("EMAIL:");
-        jPanel2.add(FROM3, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 210, 70, 36));
-
-        FROM4.setFont(new java.awt.Font("Aftika Bold", 0, 14)); // NOI18N
-        FROM4.setForeground(new java.awt.Color(20, 31, 80));
-        FROM4.setText("PASSWORD:");
-        jPanel2.add(FROM4, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 270, 110, 36));
+        jPanel2.add(ticketdetails, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 40, -1, -1));
 
         confirm.setBackground(new java.awt.Color(46, 72, 187));
         confirm.setFont(new java.awt.Font("Aftika Bold", 0, 14)); // NOI18N
@@ -96,25 +76,16 @@ public class SignUp extends javax.swing.JFrame {
                 confirmActionPerformed(evt);
             }
         });
-        jPanel2.add(confirm, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 420, 240, 40));
-
-        FROM6.setFont(new java.awt.Font("Aftika Bold", 0, 14)); // NOI18N
-        FROM6.setForeground(new java.awt.Color(20, 31, 80));
-        FROM6.setText("NAME:");
-        jPanel2.add(FROM6, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 90, -1, 36));
+        jPanel2.add(confirm, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 390, 240, 40));
 
         FROM7.setFont(new java.awt.Font("Aftika Light", 0, 12)); // NOI18N
         FROM7.setForeground(new java.awt.Color(20, 31, 80));
         FROM7.setText("Already have an account?");
-        jPanel2.add(FROM7, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 70, -1, -1));
-
-        FROM8.setFont(new java.awt.Font("Aftika Bold", 0, 14)); // NOI18N
-        FROM8.setForeground(new java.awt.Color(20, 31, 80));
-        FROM8.setText("CONFIRM PASSWORD:");
-        jPanel2.add(FROM8, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 330, 190, 36));
+        jPanel2.add(FROM7, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 90, -1, -1));
 
         jButton1.setBackground(new java.awt.Color(246, 247, 252));
         jButton1.setFont(new java.awt.Font("Aftika SemiBold", 0, 12)); // NOI18N
+        jButton1.setForeground(new java.awt.Color(20, 31, 80));
         jButton1.setText("Login.");
         jButton1.setBorder(null);
         jButton1.setBorderPainted(false);
@@ -123,25 +94,46 @@ public class SignUp extends javax.swing.JFrame {
                 jButton1ActionPerformed(evt);
             }
         });
-        jPanel2.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 70, 50, -1));
+        jPanel2.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 90, 50, -1));
 
-        match.setFont(new java.awt.Font("Aftika SemiBold", 2, 12)); // NOI18N
+        match.setFont(new java.awt.Font("Aftika SemiBold", 2, 10)); // NOI18N
         match.setForeground(new java.awt.Color(255, 51, 51));
-        jPanel2.add(match, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 390, 200, 20));
+        match.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        jPanel2.add(match, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 360, 240, 20));
 
         regPass.setFont(new java.awt.Font("Aftika Light", 0, 12)); // NOI18N
-        regPass.setForeground(new java.awt.Color(20, 31, 80));
-        regPass.setBorder(javax.swing.BorderFactory.createCompoundBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(220, 224, 243)), javax.swing.BorderFactory.createEmptyBorder(8, 8, 8, 8)));
+        regPass.setForeground(new java.awt.Color(196, 197, 201));
+        regPass.setText("Password");
+        regPass.setBorder(javax.swing.BorderFactory.createCompoundBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(223, 227, 245)), javax.swing.BorderFactory.createEmptyBorder(8, 8, 8, 8)));
+        regPass.setEchoChar('\u0000');
+        regPass.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusGained(java.awt.event.FocusEvent evt) {
+                regPassFocusGained(evt);
+            }
+            public void focusLost(java.awt.event.FocusEvent evt) {
+                regPassFocusLost(evt);
+            }
+        });
         regPass.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 regPassActionPerformed(evt);
             }
         });
-        jPanel2.add(regPass, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 300, 240, 30));
+        jPanel2.add(regPass, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 270, 240, 40));
 
         txtPass.setFont(new java.awt.Font("Aftika Light", 0, 12)); // NOI18N
-        txtPass.setForeground(new java.awt.Color(20, 31, 80));
-        txtPass.setBorder(javax.swing.BorderFactory.createCompoundBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(220, 224, 243)), javax.swing.BorderFactory.createEmptyBorder(8, 8, 8, 8)));
+        txtPass.setForeground(new java.awt.Color(196, 197, 201));
+        txtPass.setText("Confirm Password");
+        txtPass.setBorder(javax.swing.BorderFactory.createCompoundBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(223, 227, 245)), javax.swing.BorderFactory.createEmptyBorder(8, 8, 8, 8)));
+        txtPass.setEchoChar('\u0000');
+        txtPass.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusGained(java.awt.event.FocusEvent evt) {
+                txtPassFocusGained(evt);
+            }
+            public void focusLost(java.awt.event.FocusEvent evt) {
+                txtPassFocusLost(evt);
+            }
+        });
         txtPass.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtPassActionPerformed(evt);
@@ -158,19 +150,54 @@ public class SignUp extends javax.swing.JFrame {
                 txtPassKeyTyped(evt);
             }
         });
-        jPanel2.add(txtPass, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 360, 240, 30));
+        jPanel2.add(txtPass, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 320, 240, 40));
 
         regName.setFont(new java.awt.Font("Aftika Light", 0, 12)); // NOI18N
-        regName.setBorder(javax.swing.BorderFactory.createCompoundBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(220, 224, 243)), javax.swing.BorderFactory.createEmptyBorder(8, 8, 8, 8)));
-        jPanel2.add(regName, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 120, 240, 30));
+        regName.setForeground(new java.awt.Color(196, 197, 201));
+        regName.setText("Name");
+        regName.setBorder(javax.swing.BorderFactory.createCompoundBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(223, 227, 245)), javax.swing.BorderFactory.createEmptyBorder(8, 8, 8, 8)));
+        regName.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusGained(java.awt.event.FocusEvent evt) {
+                regNameFocusGained(evt);
+            }
+            public void focusLost(java.awt.event.FocusEvent evt) {
+                regNameFocusLost(evt);
+            }
+        });
+        regName.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                regNameActionPerformed(evt);
+            }
+        });
+        jPanel2.add(regName, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 120, 240, 40));
 
         regContact.setFont(new java.awt.Font("Aftika Light", 0, 12)); // NOI18N
-        regContact.setBorder(javax.swing.BorderFactory.createCompoundBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(220, 224, 243)), javax.swing.BorderFactory.createEmptyBorder(8, 8, 8, 8)));
-        jPanel2.add(regContact, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 180, 240, 30));
+        regContact.setForeground(new java.awt.Color(196, 197, 201));
+        regContact.setText("Contact No.");
+        regContact.setBorder(javax.swing.BorderFactory.createCompoundBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(223, 227, 245)), javax.swing.BorderFactory.createEmptyBorder(8, 8, 8, 8)));
+        regContact.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusGained(java.awt.event.FocusEvent evt) {
+                regContactFocusGained(evt);
+            }
+            public void focusLost(java.awt.event.FocusEvent evt) {
+                regContactFocusLost(evt);
+            }
+        });
+        jPanel2.add(regContact, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 170, 240, 40));
 
         txtUser.setFont(new java.awt.Font("Aftika Light", 0, 12)); // NOI18N
-        txtUser.setBorder(javax.swing.BorderFactory.createCompoundBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(220, 224, 243)), javax.swing.BorderFactory.createEmptyBorder(8, 8, 8, 8)));
-        jPanel2.add(txtUser, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 240, 240, 30));
+        txtUser.setForeground(new java.awt.Color(196, 197, 201));
+        txtUser.setText("Email");
+        txtUser.setBorder(javax.swing.BorderFactory.createCompoundBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(223, 227, 245)), javax.swing.BorderFactory.createEmptyBorder(8, 8, 8, 8)));
+        txtUser.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusGained(java.awt.event.FocusEvent evt) {
+                txtUserFocusGained(evt);
+            }
+            public void focusLost(java.awt.event.FocusEvent evt) {
+                txtUserFocusLost(evt);
+            }
+        });
+        jPanel2.add(txtUser, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 220, 240, 40));
 
         jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 340, 500));
 
@@ -212,7 +239,7 @@ public class SignUp extends javax.swing.JFrame {
     UIManager.put("Button.background",new Color(246,247,252));
     UIManager.put("Button.foreground",new Color(46,72,187));
 
-    if (regNameText.equals("") || regContactText.equals("") || regPassText.equals("") || txtPassText.equals("") || user.equals("")) {
+    if (regNameText.equals("Name") || regContactText.equals("Contact No.") || regPassText.equals("Password") || txtPassText.equals("Confirm Password") || user.equals("Email")) {
         JOptionPane.showMessageDialog(null, MESSAGE, "Error", JOptionPane.ERROR_MESSAGE, userIcon);
     } else if (!validator){
         JOptionPane.showMessageDialog(null, ERROR, "Error", JOptionPane.ERROR_MESSAGE, userIcon);
@@ -269,16 +296,95 @@ public class SignUp extends javax.swing.JFrame {
       validator = true;
       
       match.setText("");
-      regPass.setForeground(new Color(20, 31, 80));
       txtPass.setForeground(new Color(20, 31, 80));
     } else {
       validator = false;
       
       match.setText("Passwords do not match.");
-      regPass.setForeground(new Color(208, 67, 76));
       txtPass.setForeground(new Color(208, 67, 76));
     }
     }//GEN-LAST:event_txtPassKeyReleased
+
+    private void regNameFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_regNameFocusGained
+        if (regName.getText().equals("Name")){
+            regName.setText("");
+            regName.setForeground(new Color(20, 31, 80));
+
+        }
+    }//GEN-LAST:event_regNameFocusGained
+
+    private void regNameFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_regNameFocusLost
+        if (regName.getText().equals("")){
+            regName.setText("Name");
+            regName.setForeground(new java.awt.Color(196,197,201));
+        }
+    }//GEN-LAST:event_regNameFocusLost
+
+    private void regContactFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_regContactFocusGained
+        if (regContact.getText().equals("Contact No.")){
+            regContact.setText("");
+            regContact.setForeground(new Color(20, 31, 80));
+
+        }
+    }//GEN-LAST:event_regContactFocusGained
+
+    private void regContactFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_regContactFocusLost
+        if (regContact.getText().equals("")){
+            regContact.setText("Contact No.");
+            regContact.setForeground(new java.awt.Color(196,197,201));
+        }
+    }//GEN-LAST:event_regContactFocusLost
+
+    private void txtUserFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_txtUserFocusGained
+        if (txtUser.getText().equals("Email")){
+            txtUser.setText("");
+            txtUser.setForeground(new Color(20, 31, 80));
+
+        }
+    }//GEN-LAST:event_txtUserFocusGained
+
+    private void txtUserFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_txtUserFocusLost
+        if (txtUser.getText().equals("")){
+            txtUser.setText("Contact No.");
+            txtUser.setForeground(new java.awt.Color(196,197,201));
+        }
+    }//GEN-LAST:event_txtUserFocusLost
+
+    private void regPassFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_regPassFocusGained
+        if (Arrays.equals(regPass.getPassword(), "Password".toCharArray())){
+            regPass.setText("");
+            regPass.setEchoChar('\u2022');
+            regPass.setForeground(new Color(20, 31, 80));
+        }
+    }//GEN-LAST:event_regPassFocusGained
+
+    private void regPassFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_regPassFocusLost
+        if (Arrays.equals(regPass.getPassword(), "".toCharArray())){
+            regPass.setText("Password");
+            regPass.setEchoChar('\u0000');
+            regPass.setForeground(new java.awt.Color(196,197,201));
+        }
+    }//GEN-LAST:event_regPassFocusLost
+
+    private void regNameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_regNameActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_regNameActionPerformed
+
+    private void txtPassFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_txtPassFocusGained
+        if (Arrays.equals(txtPass.getPassword(), "Confirm Password".toCharArray())){
+            txtPass.setText("");
+            txtPass.setEchoChar('\u2022');
+            txtPass.setForeground(new Color(20, 31, 80));
+        }
+    }//GEN-LAST:event_txtPassFocusGained
+
+    private void txtPassFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_txtPassFocusLost
+        if (Arrays.equals(txtPass.getPassword(), "".toCharArray())){
+            txtPass.setText("Confirm Password");
+            txtPass.setEchoChar('\u0000');
+            txtPass.setForeground(new java.awt.Color(196,197,201));
+        }
+    }//GEN-LAST:event_txtPassFocusLost
 
     /**
      * @param args the command line arguments
@@ -316,13 +422,8 @@ public class SignUp extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel FROM2;
-    private javax.swing.JLabel FROM3;
-    private javax.swing.JLabel FROM4;
     private javax.swing.JLabel FROM5;
-    private javax.swing.JLabel FROM6;
     private javax.swing.JLabel FROM7;
-    private javax.swing.JLabel FROM8;
     private javax.swing.JButton confirm;
     private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel2;

@@ -46,6 +46,8 @@ public class JTransit extends javax.swing.JFrame {
         jButton3 = new javax.swing.JButton();
         jButton5 = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Home");
@@ -57,19 +59,19 @@ public class JTransit extends javax.swing.JFrame {
         jPanel1.setMinimumSize(new java.awt.Dimension(603, 436));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        name.setFont(new java.awt.Font("Akira Expanded", 2, 48)); // NOI18N
+        name.setFont(new java.awt.Font("Akira Expanded", 2, 28)); // NOI18N
         name.setForeground(new java.awt.Color(255, 255, 255));
         name.setText("JTransit");
-        jPanel1.add(name, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 60, -1, 46));
+        jPanel1.add(name, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 30, -1, 46));
 
-        subname.setFont(new java.awt.Font("Aftika Light", 0, 16)); // NOI18N
+        subname.setFont(new java.awt.Font("Aftika Light", 0, 10)); // NOI18N
         subname.setForeground(new java.awt.Color(255, 255, 255));
         subname.setText("Bus Ticketing System");
-        jPanel1.add(subname, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 110, -1, -1));
+        jPanel1.add(subname, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 70, -1, -1));
 
-        customer.setBackground(new java.awt.Color(251, 251, 253));
+        customer.setBackground(new java.awt.Color(252, 252, 252));
         customer.setFont(new java.awt.Font("Aftika Bold", 0, 14)); // NOI18N
-        customer.setForeground(new java.awt.Color(51, 51, 51));
+        customer.setForeground(new java.awt.Color(20, 31, 80));
         customer.setText("Customer Details");
         customer.setBorder(null);
         customer.setBorderPainted(false);
@@ -78,11 +80,11 @@ public class JTransit extends javax.swing.JFrame {
                 customerActionPerformed(evt);
             }
         });
-        jPanel1.add(customer, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 240, 180, 51));
+        jPanel1.add(customer, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 410, 250, 63));
 
-        jButton3.setBackground(new java.awt.Color(251, 251, 253));
+        jButton3.setBackground(new java.awt.Color(252, 252, 252));
         jButton3.setFont(new java.awt.Font("Aftika Bold", 0, 14)); // NOI18N
-        jButton3.setForeground(new java.awt.Color(51, 51, 51));
+        jButton3.setForeground(new java.awt.Color(20, 31, 80));
         jButton3.setText("Manage Bus Routes");
         jButton3.setBorder(null);
         jButton3.setBorderPainted(false);
@@ -91,11 +93,11 @@ public class JTransit extends javax.swing.JFrame {
                 jButton3ActionPerformed(evt);
             }
         });
-        jPanel1.add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 310, 180, 51));
+        jPanel1.add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 410, 240, 63));
 
-        jButton5.setBackground(new java.awt.Color(251, 251, 253));
+        jButton5.setBackground(new java.awt.Color(49, 77, 199));
         jButton5.setFont(new java.awt.Font("Aftika Bold", 0, 14)); // NOI18N
-        jButton5.setForeground(new java.awt.Color(51, 51, 51));
+        jButton5.setForeground(new java.awt.Color(252, 252, 252));
         jButton5.setText("Sign Out");
         jButton5.setBorder(null);
         jButton5.setBorderPainted(false);
@@ -104,12 +106,23 @@ public class JTransit extends javax.swing.JFrame {
                 jButton5ActionPerformed(evt);
             }
         });
-        jPanel1.add(jButton5, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 380, 180, 51));
+        jPanel1.add(jButton5, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 410, 250, 63));
 
-        jLabel1.setFont(new java.awt.Font("Aftika ExtraBold", 0, 36)); // NOI18N
+        jLabel1.setFont(new java.awt.Font("Aftika SemiBold", 0, 18)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel1.setText("ADMIN HOMEPAGE");
-        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 170, -1, 36));
+        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        jLabel1.setText("Your Ultimate Biyahe Experience");
+        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 230, 400, 36));
+
+        jLabel2.setFont(new java.awt.Font("Aftika ExtraBold", 0, 40)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        jLabel2.setText("Welcome to JTransit!");
+        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 180, 460, 36));
+
+        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/assets/homepage.png"))); // NOI18N
+        jLabel3.setText("jLabel3");
+        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 740, 410));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -121,9 +134,7 @@ public class JTransit extends javax.swing.JFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 473, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
+            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 473, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
 
         pack();
@@ -190,6 +201,8 @@ public class JTransit extends javax.swing.JFrame {
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton5;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JLabel name;
     private javax.swing.JLabel subname;
