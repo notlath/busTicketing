@@ -5,6 +5,8 @@ package busticketing;
 import javax.swing.ImageIcon;
 import java.net.URL;
 import static busticketing.BusTicketing.sqlConn;
+import java.awt.Color;
+import java.awt.Font;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
@@ -23,6 +25,7 @@ public class CustomerDetails extends javax.swing.JFrame {
     public CustomerDetails() {
         initComponents();
         setImageIcon();
+        headerTable();
     }
     
     private void setImageIcon(){
@@ -37,6 +40,7 @@ public class CustomerDetails extends javax.swing.JFrame {
         
         initComponents();
         customerDetails();
+        headerTable();
     }
     
     public CustomerDetails(JTransit jTransit){
@@ -49,9 +53,14 @@ public class CustomerDetails extends javax.swing.JFrame {
         
         initComponents();
         customerDetails();
+        headerTable();
         
     }
-    
+    private void headerTable(){
+        ticketLog.getTableHeader().setFont(new Font("Aftika ExtraBold", Font.BOLD, 12));
+        ticketLog.getTableHeader().setBackground(new Color(46,72,187));
+        ticketLog.getTableHeader().setForeground(new Color(246,247,252));
+    }
     private void customerDetails(){
         try {
           String query = "SELECT * FROM jtransit.users WHERE email = ?";
@@ -151,17 +160,17 @@ public class CustomerDetails extends javax.swing.JFrame {
         subname1.setText("Bus Ticketing System");
         jPanel1.add(subname1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 70, -1, -1));
 
-        nameLabel.setFont(new java.awt.Font("Aftika ExtraBold", 0, 24)); // NOI18N
+        nameLabel.setFont(new java.awt.Font("Aftika ExtraBold", 0, 26)); // NOI18N
         nameLabel.setForeground(new java.awt.Color(255, 255, 255));
         nameLabel.setText("sample");
-        jPanel1.add(nameLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 120, 350, -1));
+        jPanel1.add(nameLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 120, 440, -1));
 
-        emailLabel.setFont(new java.awt.Font("Aftika SemiBold", 0, 12)); // NOI18N
+        emailLabel.setFont(new java.awt.Font("Aftika SemiBold", 0, 14)); // NOI18N
         emailLabel.setForeground(new java.awt.Color(255, 255, 255));
         emailLabel.setText("sample");
         jPanel1.add(emailLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 160, 270, -1));
 
-        contactLabel.setFont(new java.awt.Font("Aftika SemiBold", 0, 12)); // NOI18N
+        contactLabel.setFont(new java.awt.Font("Aftika SemiBold", 0, 14)); // NOI18N
         contactLabel.setForeground(new java.awt.Color(255, 255, 255));
         contactLabel.setText("sample");
         jPanel1.add(contactLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 190, 270, -1));
