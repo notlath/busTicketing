@@ -1,8 +1,14 @@
 package busticketing;
+import static busticketing.BusTicketing.sqlConn;
 import java.text.DecimalFormat;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.Random;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+
+
 /**
  *
  * @author Lathrell Pagsuguiron
@@ -11,6 +17,7 @@ public class Receipt extends javax.swing.JFrame {
     
     BusDetails bus;
     boolean studentDiscount;
+    String slip;
     
     /**
      * Creates new form Receipt
@@ -21,40 +28,101 @@ public class Receipt extends javax.swing.JFrame {
         
     }
     
+    public Receipt(String slipNumber){
+        this.slip = slipNumber;
+        initComponents();
+        fetchData();
+        
+    }
+    
+    
     public Receipt(BusDetails bus){
         this.bus = bus;
         this.studentDiscount = this.bus.busRoute.discountStudent;
         initComponents();
-        receiptComponents();
         displayDateTime();
+        receiptComponents();
+        
     }
+
+    private void fetchData(){
+                try {
+                   String query = "SELECT * FROM jtransit.ticket WHERE slipNumber = ?";
+                   PreparedStatement stmt = sqlConn.prepareStatement(query);
+                   stmt.setString(1, this.slip);
+
+                 
+                   ResultSet rs = stmt.executeQuery();
+                   if (rs.next()) {
+                      String from = rs.getString("origin");
+                      String to = rs.getString("destination");
+                      String date = rs.getString("date");
+                      String time = rs.getString("time");
+                      String vehicleNumber = rs.getString("vehicleNumber");
+                      String price = rs.getString("price");
+                      boolean isStudent = rs.getBoolean("isStudent");
+                      
+                      dateReceipt.setText(date);
+                      timeReceipt.setText(time);
+                      fee.setText(price);
+                      student.setText(isStudent ? "STUDENT" : "");
+                      vehicleNumber1.setText(vehicleNumber);
+                      slipNumber.setText(this.slip);
+                      origin.setText(from);
+                      destination.setText(to);
+                      
+                      
+                   }
+                } catch (SQLException e) {
+                   System.out.print(e);
+                }
+                }
     
     private void receiptComponents() {
         
-       if (studentDiscount){
+        origin.setText(this.bus.from);
+        destination.setText(this.bus.to);
+
+        // Create a DecimalFormat object with the pattern "0.00"
+        DecimalFormat df = new DecimalFormat("0.00");
+
+        // Format the float value with two decimal places using the DecimalFormat object
+        String priceString = "PHP " + df.format(this.bus.price);
+
+        fee.setText(priceString);
+        String randomNumber = getRandomNumberString();
+        String slipRNumber = getRandomNumberString();
+
+        vehicleNumber1.setText(randomNumber);
+        slipNumber.setText(slipRNumber);
+        
+        if (studentDiscount) {
            student.setText("STUDENT");
-       }else{
+        } else {
            student.setText("");
-       }
+        }
 
-       origin.setText(this.bus.from);
-       destination.setText(this.bus.to);
+        try {
+           String st = "INSERT INTO ticket (slipNumber, origin, destination, date, time, vehicleNumber, price, isStudent) VALUES (?, ?, ?, ?, ?, ?, ?, ?)";
+           PreparedStatement pstmt = BusTicketing.sqlConn.prepareStatement(st);
 
-       // Create a DecimalFormat object with the pattern "0.00"
-       DecimalFormat df = new DecimalFormat("0.00");
+           pstmt.setString(1, slipRNumber);
+           pstmt.setString(2, this.bus.from);
+           pstmt.setString(3, this.bus.to);
+           pstmt.setString(4, dateReceipt.getText());
+           pstmt.setString(5, timeReceipt.getText());
+           pstmt.setString(6, randomNumber);
+           pstmt.setString(7, priceString);
+           pstmt.setBoolean(8, studentDiscount);
 
-       // Format the float value with two decimal places using the DecimalFormat object
-       String priceString = "PHP " + df.format(this.bus.price);
+           pstmt.executeUpdate();
 
-       fee.setText(priceString);
-       String randomNumber = getRandomNumberString();
-       String slipRNumber = getRandomNumberString();
+        } catch (SQLException e) {
+           System.out.println(e);
+        }
 
-       vehicleNumber1.setText(randomNumber);
-       slipNumber.setText(slipRNumber);
-
-    }
-
+        }
+    
     public static String getRandomNumberString() {
        // It will generate 6 digit random Number.
        // from 0 to 999999

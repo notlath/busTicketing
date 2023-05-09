@@ -255,7 +255,6 @@ public class SignUp extends javax.swing.JFrame {
 
             pstmt.executeUpdate();
 
-            System.out.println("User added successfully");
         } catch (SQLException e) {
             System.out.println(e);
         }

@@ -8,7 +8,10 @@ import static busticketing.BusTicketing.sqlConn;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
+import java.sql.ResultSetMetaData;
 import java.sql.PreparedStatement;
+import java.util.Vector;
+import javax.swing.table.DefaultTableModel;
 
 public class CustomerDetails extends javax.swing.JFrame {
     User user;
@@ -68,6 +71,42 @@ public class CustomerDetails extends javax.swing.JFrame {
         } catch (SQLException e) {
           System.out.print(e);
         }
+        
+        // 
+        
+          try {
+          String query = "SELECT * FROM jtransit.ticket";
+          PreparedStatement stmt = sqlConn.prepareStatement(query);
+
+
+          ResultSet rs = stmt.executeQuery();
+          ResultSetMetaData stData = rs.getMetaData();
+          
+          int q = stData.getColumnCount();
+          
+          DefaultTableModel RecordTable = (DefaultTableModel)ticketLog.getModel();
+          RecordTable.setRowCount(0);
+          
+          while (rs.next()) {
+              
+              Vector columnData = new Vector();
+              
+              int i;
+
+              for (i=1; i<=q; i++){
+                  columnData.add(rs.getString("slipNumber"));
+                  columnData.add(rs.getString("price"));
+                  columnData.add(rs.getString("origin"));
+                  columnData.add(rs.getString("destination"));
+                  columnData.add(rs.getString("time"));
+                  columnData.add(rs.getString("date"));
+                  
+              }
+              RecordTable.addRow(columnData);
+          }
+        } catch (SQLException e) {
+          System.out.print(e);
+        }
 
         }
     
@@ -88,9 +127,10 @@ public class CustomerDetails extends javax.swing.JFrame {
         emailLabel = new javax.swing.JLabel();
         contactLabel = new javax.swing.JLabel();
         jButton1 = new javax.swing.JButton();
-        ticketdetails = new javax.swing.JLabel();
         back = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        ticketLog = new javax.swing.JTable();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Customer Details");
@@ -111,20 +151,20 @@ public class CustomerDetails extends javax.swing.JFrame {
         subname1.setText("Bus Ticketing System");
         jPanel1.add(subname1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 70, -1, -1));
 
-        nameLabel.setFont(new java.awt.Font("Aftika Bold", 0, 20)); // NOI18N
+        nameLabel.setFont(new java.awt.Font("Aftika ExtraBold", 0, 24)); // NOI18N
         nameLabel.setForeground(new java.awt.Color(255, 255, 255));
         nameLabel.setText("sample");
-        jPanel1.add(nameLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 230, 350, -1));
+        jPanel1.add(nameLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 120, 350, -1));
 
         emailLabel.setFont(new java.awt.Font("Aftika SemiBold", 0, 12)); // NOI18N
         emailLabel.setForeground(new java.awt.Color(255, 255, 255));
         emailLabel.setText("sample");
-        jPanel1.add(emailLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 270, 270, -1));
+        jPanel1.add(emailLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 160, 270, -1));
 
         contactLabel.setFont(new java.awt.Font("Aftika SemiBold", 0, 12)); // NOI18N
         contactLabel.setForeground(new java.awt.Color(255, 255, 255));
         contactLabel.setText("sample");
-        jPanel1.add(contactLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 300, 270, -1));
+        jPanel1.add(contactLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 190, 270, -1));
 
         jButton1.setBackground(new java.awt.Color(46, 72, 187));
         jButton1.setFont(new java.awt.Font("Aftika Regular", 0, 14)); // NOI18N
@@ -136,12 +176,7 @@ public class CustomerDetails extends javax.swing.JFrame {
                 jButton1ActionPerformed(evt);
             }
         });
-        jPanel1.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 330, 100, -1));
-
-        ticketdetails.setFont(new java.awt.Font("Aftika ExtraBold", 0, 36)); // NOI18N
-        ticketdetails.setForeground(new java.awt.Color(255, 255, 255));
-        ticketdetails.setText("BIYAHERO PROFILE");
-        jPanel1.add(ticketdetails, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 150, -1, -1));
+        jPanel1.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 220, 100, -1));
 
         back.setBackground(new java.awt.Color(246, 247, 252));
         back.setFont(new java.awt.Font("Aftika Bold", 0, 14)); // NOI18N
@@ -155,7 +190,38 @@ public class CustomerDetails extends javax.swing.JFrame {
         jPanel1.add(back, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 20, 107, 51));
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/assets/customerdetails.png"))); // NOI18N
-        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 230, 130, 130));
+        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 120, 130, 130));
+
+        ticketLog.setBackground(new java.awt.Color(246, 247, 252));
+        ticketLog.setFont(new java.awt.Font("Aftika Bold", 0, 12)); // NOI18N
+        ticketLog.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null}
+            },
+            new String [] {
+                "SLIP NO.", "PRICE", "ORIGIN", "DESTINATION", "TIME", "DATE"
+            }
+        ) {
+            boolean[] canEdit = new boolean [] {
+                false, false, false, false, false, false
+            };
+
+            public boolean isCellEditable(int rowIndex, int columnIndex) {
+                return canEdit [columnIndex];
+            }
+        });
+        ticketLog.setGridColor(new java.awt.Color(0, 153, 153));
+        ticketLog.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                ticketLogMouseClicked(evt);
+            }
+        });
+        jScrollPane1.setViewportView(ticketLog);
+
+        jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 290, 570, 140));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -188,6 +254,15 @@ public class CustomerDetails extends javax.swing.JFrame {
         dispose();
 
     }//GEN-LAST:event_backActionPerformed
+
+    private void ticketLogMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ticketLogMouseClicked
+          DefaultTableModel RecordTable = (DefaultTableModel)ticketLog.getModel();
+          int selectedRows = ticketLog.getSelectedRow();
+          
+          String slipNumber = RecordTable.getValueAt(selectedRows,0).toString();
+          new Receipt(slipNumber).setVisible(true);
+          
+    }//GEN-LAST:event_ticketLogMouseClicked
 
     /**
      * @param args the command line arguments
@@ -232,9 +307,10 @@ public class CustomerDetails extends javax.swing.JFrame {
     private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JLabel name1;
     private javax.swing.JLabel nameLabel;
     private javax.swing.JLabel subname1;
-    private javax.swing.JLabel ticketdetails;
+    private javax.swing.JTable ticketLog;
     // End of variables declaration//GEN-END:variables
 }

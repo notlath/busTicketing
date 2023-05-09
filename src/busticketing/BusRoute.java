@@ -1639,7 +1639,13 @@ public class BusRoute extends javax.swing.JFrame {
     }//GEN-LAST:event_discountActionPerformed
 
     private void discountStateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_discountStateChanged
-        
+        if (discount.isSelected()) {
+           discountStudent = true;
+
+        } else {
+           discountStudent = false;
+        }
+
     }//GEN-LAST:event_discountStateChanged
 
     /**

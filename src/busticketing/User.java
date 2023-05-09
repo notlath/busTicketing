@@ -203,10 +203,7 @@ public class User extends javax.swing.JFrame {
         this.userPassword = password;
         this.contactNumber = contact;
         this.fullName = fName;
-        
-        
-        System.out.println("Name: " + userName);
-        System.out.println("Password: " + userPassword);
+
         
         this.setVisible(true);
     }
